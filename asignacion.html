@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maqueta académica de AutoFacture con datos ficticios y navegación local.">
+  <title>Asignación de responsable | AutoFacture</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera"><div class="contenedor cabecera-fila"><a class="marca" href="bandeja.html"><span class="monograma" aria-hidden="true">AF</span><span><strong>AutoFacture</strong><span class="submarca">Gestión interna de facturas</span></span></a><div class="nav-escritorio"><nav aria-label="Navegación principal"><a href="bandeja.html">Bandeja</a><a href="reportes.html">Reportes</a><a href="errores.html">Errores</a><a href="index.html">Salir de la demostración</a></nav></div><span class="identidad">Perfil de ejemplo<br><strong>AUXR</strong></span></div><div class="contenedor nav-movil"><details><summary>Menú de navegación</summary><nav aria-label="Navegación principal"><a href="bandeja.html">Bandeja</a><a href="reportes.html">Reportes</a><a href="errores.html">Errores</a><a href="index.html">Salir de la demostración</a></nav></details></div></header>
+  <div class="aviso-demo"><div class="contenedor"><strong>Datos ficticios.</strong> Esta demostración no se conecta con FACTURE, DIAN ni SAP.</div></div>
+  <main id="contenido" class="contenedor" tabindex="-1">
+    
+<p class="ruta"><a href="bandeja.html">Bandeja</a><span aria-hidden="true"> / </span><a href="detalle.html">FE-DEMO-101</a><span aria-hidden="true"> / </span><span>Asignación</span></p>
+<div class="titulo-pagina"><div><p class="ceja">Decisión previa al trámite</p><h1>Asignación de responsable</h1><p>Revisa el documento y el responsable antes de continuar.</p></div></div>
+<div class="rejilla-detalle">
+  <section class="panel" aria-labelledby="asignacion-titulo"><h2 id="asignacion-titulo">Propuesta para FE-DEMO-101</h2><p id="asignacion-ayuda">Este caso tiene un destino fijo: Lina Demo, del área Compras. Los campos no se guardan ni modifican datos.</p>
+    <form action="detalle.html#asignacion-ejemplo" method="get" aria-describedby="asignacion-ayuda">
+      <div class="campo"><label for="responsable">Responsable del ejemplo <span>(obligatorio)</span></label><select id="responsable" required><option value="lina">Lina Demo · Compras</option></select><p class="ayuda">Se muestra una opción ficticia; no es el listado de empleados de Manitoba.</p></div>
+      <div class="campo"><label for="motivo">Observación de ejemplo <span>(opcional)</span></label><textarea id="motivo" rows="3" maxlength="300" aria-describedby="motivo-ayuda">Se relaciona la orden de compra OC-DEMO-7001.</textarea><p id="motivo-ayuda" class="ayuda">Máximo 300 caracteres. El texto escrito aquí se pierde al salir.</p></div>
+      <details class="confirmacion" id="revision-asignacion"><summary>Revisar la propuesta antes de continuar</summary><dl class="datos-cortos"><div><dt>Factura</dt><dd>FE-DEMO-101</dd></div><div><dt>Responsable</dt><dd>Lina Demo</dd></div><div><dt>Área</dt><dd>Compras</dd></div></dl><div class="casilla"><input id="confirmar" type="checkbox" required><label for="confirmar">Revisé la factura y el responsable del ejemplo (obligatorio).</label></div><div class="acciones"><button class="boton principal" type="submit">Ver resultado de ejemplo</button><a class="boton secundario" href="detalle.html">Cancelar</a></div></details>
+    </form>
+  </section>
+  <aside class="panel" aria-labelledby="contexto-titulo"><h2 id="contexto-titulo">Contexto de la decisión</h2><dl class="ficha-datos"><div><dt>Proveedor</dt><dd>Proveedor Alfa (ficticio)</dd></div><div><dt>Total informado</dt><dd>$ 1.190.000 COP</dd></div><div><dt>Estado del conjunto base</dt><dd>Recibida</dd></div><div><dt>Responsable actual</dt><dd>Sin asignar</dd></div></dl><h3>Regla que se representa</h3><p>No iniciar el trámite sin un responsable. Esta vista representa una asignación manual de ejemplo, sin ejecutar reglas automáticas.</p><p class="ayuda">El resultado conserva la distinción entre revisión interna, asignación y cierre del trámite.</p></aside>
+</div>
+<p><a class="enlace-accion" href="detalle.html">Volver al detalle sin continuar</a></p>
+  </main>
+  <footer class="pie"><div class="contenedor">AutoFacture · Prototipo académico · Cierre interno significa cierre del trámite, sin contabilización ni pago.</div></footer>
+</body>
+</html>

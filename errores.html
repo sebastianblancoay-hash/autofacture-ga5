@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maqueta académica de AutoFacture con datos ficticios y navegación local.">
+  <title>Informe de errores | AutoFacture</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera"><div class="contenedor cabecera-fila"><a class="marca" href="bandeja.html"><span class="monograma" aria-hidden="true">AF</span><span><strong>AutoFacture</strong><span class="submarca">Gestión interna de facturas</span></span></a><div class="nav-escritorio"><nav aria-label="Navegación principal"><a href="bandeja.html">Bandeja</a><a href="reportes.html">Reportes</a><a href="errores.html" aria-current="page">Errores</a><a href="index.html">Salir de la demostración</a></nav></div><span class="identidad">Perfil de ejemplo<br><strong>AUXR</strong></span></div><div class="contenedor nav-movil"><details><summary>Menú de navegación</summary><nav aria-label="Navegación principal"><a href="bandeja.html">Bandeja</a><a href="reportes.html">Reportes</a><a href="errores.html" aria-current="page">Errores</a><a href="index.html">Salir de la demostración</a></nav></details></div></header>
+  <div class="aviso-demo"><div class="contenedor"><strong>Datos ficticios.</strong> Esta demostración no se conecta con FACTURE, DIAN ni SAP.</div></div>
+  <main id="contenido" class="contenedor" tabindex="-1">
+    
+<p class="ruta"><a href="bandeja.html">Bandeja</a><span aria-hidden="true"> / </span><span>Informe de errores</span></p>
+<div class="titulo-pagina"><div><p class="ceja">Novedad de recepción</p><h1>Informe de errores</h1><p>Factura FE-DEMO-104 · AF-DEMO-004 · Proveedor Delta (ficticio).</p></div><span class="estado">Pendiente de corrección</span></div>
+<section class="panel error-panel" aria-labelledby="error-titulo"><p class="ceja">Dato obligatorio ausente</p><h2 id="error-titulo">Falta el NIT del emisor en este ejemplo.</h2><p id="error-explicacion">La revisión interna no puede identificar al proveedor con los datos disponibles. No continúes con la asignación de esta factura hasta revisar el soporte y completar su identificación.</p><dl class="ficha-datos"><div><dt>Campo afectado</dt><dd>NIT del emisor</dd></div><div><dt>Valor recibido</dt><dd>No informado</dd></div><div><dt>Referencia del mensaje</dt><dd>AF-DATO-01 (ejemplo)</dd></div><div><dt>Qué se conserva</dt><dd>Registro de recepción y novedad de revisión del caso.</dd></div></dl><div class="acciones"><a id="recuperar" class="boton principal" href="bandeja.html#factura-demo-104">Volver a la factura en bandeja</a><a class="boton secundario" href="reportes.html">Consultar su estado en el reporte</a></div></section>
+<details class="ayuda-detalle" id="ayuda-error"><summary>Cómo se resolvería en el producto completo</summary><p>El auxiliar de radicación revisaría el documento de origen y registraría la corrección autorizada. Una nueva revisión conservaría el historial anterior. La maqueta muestra el mensaje y el regreso a la bandeja; no corrige ni reenvía archivos.</p><p>La fecha de vencimiento también figura como no informada, pero se muestra como dato pendiente, sin atribuirle una regla obligatoria que no está definida para este caso.</p></details>
+<p class="ayuda">Se informa un problema de datos del ejemplo. No es un rechazo oficial de DIAN ni una falla de un servicio externo.</p>
+  </main>
+  <footer class="pie"><div class="contenedor">AutoFacture · Prototipo académico · Cierre interno significa cierre del trámite, sin contabilización ni pago.</div></footer>
+</body>
+</html>

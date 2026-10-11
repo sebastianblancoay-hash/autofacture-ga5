@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maqueta académica de AutoFacture con datos ficticios y navegación local.">
+  <title>Reportes de seguimiento | AutoFacture</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera"><div class="contenedor cabecera-fila"><a class="marca" href="bandeja.html"><span class="monograma" aria-hidden="true">AF</span><span><strong>AutoFacture</strong><span class="submarca">Gestión interna de facturas</span></span></a><div class="nav-escritorio"><nav aria-label="Navegación principal"><a href="bandeja.html">Bandeja</a><a href="reportes.html" aria-current="page">Reportes</a><a href="errores.html">Errores</a><a href="index.html">Salir de la demostración</a></nav></div><span class="identidad">Perfil de ejemplo<br><strong>AUXR</strong></span></div><div class="contenedor nav-movil"><details><summary>Menú de navegación</summary><nav aria-label="Navegación principal"><a href="bandeja.html">Bandeja</a><a href="reportes.html" aria-current="page">Reportes</a><a href="errores.html">Errores</a><a href="index.html">Salir de la demostración</a></nav></details></div></header>
+  <div class="aviso-demo"><div class="contenedor"><strong>Datos ficticios.</strong> Esta demostración no se conecta con FACTURE, DIAN ni SAP.</div></div>
+  <main id="contenido" class="contenedor" tabindex="-1">
+    
+<div class="titulo-pagina"><div><p class="ceja">Consulta administrativa</p><h1>Reportes de seguimiento</h1><p>Conjunto base: cuatro facturas ficticias, sin actualizaciones automáticas.</p></div><a class="boton secundario" href="bandeja.html">Volver a bandeja</a></div>
+<p class="nota-corte" id="corte">Corte: 9 de octubre de 2026, 5:00 p. m., hora de Bogotá. Moneda: COP.</p>
+<section class="resumen" aria-label="Indicadores del conjunto base"><div><strong>4</strong><span>Facturas</span></div><div><strong>2</strong><span>Con responsable</span></div><div><strong>$ 2.380.000 COP</strong><span>Total de valores informados</span></div></section>
+<div class="rejilla-detalle"><section class="panel" aria-labelledby="estado-titulo"><h2 id="estado-titulo">Distribución por estado</h2><ul class="distribucion"><li><span>Recibida</span><strong>1</strong></li><li><span>Asignada</span><strong>1</strong></li><li><span>En trámite</span><strong>1</strong></li><li><span>Pendiente de corrección</span><strong>1</strong></li><li><span>Cerrada</span><strong>0</strong></li><li><span>Rechazada preliminarmente</span><strong>0</strong></li></ul></section><section class="panel" aria-labelledby="descarga-titulo"><h2 id="descarga-titulo">Archivo del ejemplo</h2><p>Descarga las mismas cuatro filas y sus valores informados. Es un archivo fijo; no aplica filtros ni incorpora la asignación de ejemplo.</p><a id="descargar-csv" class="boton principal" href="recursos/reporte_demo.csv" download>Descargar CSV de ejemplo</a><p class="ayuda">Excel y PDF del reporte son formatos previstos para el producto completo. Aquí se incluye únicamente la muestra CSV.</p></section></div>
+<section class="panel tabla-panel" aria-labelledby="detalle-reporte-titulo"><h2 id="detalle-reporte-titulo">Detalle del conjunto base</h2><p class="ayuda" id="tabla-ayuda">En una vista angosta, desplaza solo la tabla hacia los lados. También puedes enfocar esta región con Tab y usar las flechas.</p><div class="tabla-desplazable" role="region" aria-labelledby="detalle-reporte-titulo" aria-describedby="tabla-ayuda" tabindex="0"><table><caption>Cuatro facturas del conjunto de ejemplo</caption><thead><tr><th scope="col">Factura</th><th scope="col">Estado</th><th scope="col">Responsable</th><th scope="col">Valor total informado</th></tr></thead><tbody><tr><th scope="row">FE-DEMO-101</th><td>Recibida</td><td>Sin asignar</td><td class="importe">$ 1.190.000 COP</td></tr><tr><th scope="row">FE-DEMO-102</th><td>Asignada</td><td>Lina Demo</td><td class="importe">$ 595.000 COP</td></tr><tr><th scope="row">FE-DEMO-103</th><td>En trámite</td><td>Pablo Demo</td><td class="importe">$ 238.000 COP</td></tr><tr><th scope="row">FE-DEMO-104</th><td>Pendiente de corrección</td><td>Sin asignar</td><td class="importe">$ 357.000 COP</td></tr></tbody><tfoot><tr><th scope="row" colspan="3">Total informado de cuatro facturas</th><td class="importe">$ 2.380.000 COP</td></tr></tfoot></table></div></section>
+  </main>
+  <footer class="pie"><div class="contenedor">AutoFacture · Prototipo académico · Cierre interno significa cierre del trámite, sin contabilización ni pago.</div></footer>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{
+  "aviso": "Datos ficticios; corte fijo; sin conexión externa",
+  "corte": "2026-10-09T17:00:00-05:00",
+  "moneda": "COP",
+  "facturas": [
+    {
+      "interno": "AF-DEMO-001",
+      "numero": "FE-DEMO-101",
+      "proveedor": "Proveedor Alfa",
+      "nit": "900000001-0",
+      "emision": "2026-10-06",
+      "recepcion": "2026-10-07",
+      "vencimiento": "2026-10-20",
+      "subtotal": 1000000,
+      "iva": 190000,
+      "total": 1190000,
+      "estado": "Recibida",
+      "responsable": "Sin asignar"
+    },
+    {
+      "interno": "AF-DEMO-002",
+      "numero": "FE-DEMO-102",
+      "proveedor": "Proveedor Beta",
+      "nit": "900000002-0",
+      "emision": "2026-10-04",
+      "recepcion": "2026-10-05",
+      "vencimiento": "2026-10-18",
+      "subtotal": 500000,
+      "iva": 95000,
+      "total": 595000,
+      "estado": "Asignada",
+      "responsable": "Lina Demo"
+    },
+    {
+      "interno": "AF-DEMO-003",
+      "numero": "FE-DEMO-103",
+      "proveedor": "Proveedor Gamma",
+      "nit": "900000003-0",
+      "emision": "2026-10-02",
+      "recepcion": "2026-10-03",
+      "vencimiento": "2026-10-12",
+      "subtotal": 200000,
+      "iva": 38000,
+      "total": 238000,
+      "estado": "En trámite",
+      "responsable": "Pablo Demo"
+    },
+    {
+      "interno": "AF-DEMO-004",
+      "numero": "FE-DEMO-104",
+      "proveedor": "Proveedor Delta",
+      "nit": "No informado",
+      "emision": "2026-10-08",
+      "recepcion": "2026-10-08",
+      "vencimiento": "No informada",
+      "subtotal": 300000,
+      "iva": 57000,
+      "total": 357000,
+      "estado": "Pendiente de corrección",
+      "responsable": "Sin asignar"
+    }
+  ]
+}

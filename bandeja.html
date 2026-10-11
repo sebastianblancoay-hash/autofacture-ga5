@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maqueta académica de AutoFacture con datos ficticios y navegación local.">
+  <title>Bandeja de facturas | AutoFacture</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera"><div class="contenedor cabecera-fila"><a class="marca" href="bandeja.html"><span class="monograma" aria-hidden="true">AF</span><span><strong>AutoFacture</strong><span class="submarca">Gestión interna de facturas</span></span></a><div class="nav-escritorio"><nav aria-label="Navegación principal"><a href="bandeja.html" aria-current="page">Bandeja</a><a href="reportes.html">Reportes</a><a href="errores.html">Errores</a><a href="index.html">Salir de la demostración</a></nav></div><span class="identidad">Perfil de ejemplo<br><strong>AUXR</strong></span></div><div class="contenedor nav-movil"><details><summary>Menú de navegación</summary><nav aria-label="Navegación principal"><a href="bandeja.html" aria-current="page">Bandeja</a><a href="reportes.html">Reportes</a><a href="errores.html">Errores</a><a href="index.html">Salir de la demostración</a></nav></details></div></header>
+  <div class="aviso-demo"><div class="contenedor"><strong>Datos ficticios.</strong> Esta demostración no se conecta con FACTURE, DIAN ni SAP.</div></div>
+  <main id="contenido" class="contenedor" tabindex="-1">
+    
+<div class="titulo-pagina"><div><p class="ceja">Recepción y seguimiento</p><h1>Bandeja de facturas</h1><p>Revisa el estado antes de abrir o asignar un documento.</p></div><a class="boton secundario" href="reportes.html">Consultar reportes</a></div>
+<section class="resumen" aria-label="Resumen del conjunto de ejemplo"><div><strong>4</strong><span>Facturas recibidas</span></div><div><strong>1</strong><span>Con datos por corregir</span></div><div><strong>2</strong><span>Con responsable</span></div></section>
+<section class="selector-vistas" aria-labelledby="vistas-titulo">
+  <h2 id="vistas-titulo">Vistas del conjunto de ejemplo</h2>
+  <p class="ayuda" id="vistas-ayuda">Son tres vistas predefinidas. No hay búsqueda libre ni consulta a una base de datos.</p>
+  <input type="radio" name="vista" id="todas" checked aria-describedby="vistas-ayuda"><label class="opcion-vista" for="todas">Todas (4)</label>
+  <input type="radio" name="vista" id="novedades" aria-describedby="vistas-ayuda"><label class="opcion-vista" for="novedades">Con novedad (1)</label>
+  <input type="radio" name="vista" id="vacia" aria-describedby="vistas-ayuda"><label class="opcion-vista" for="vacia">Sin resultados (0)</label>
+  <div class="resultados">
+    <div class="vista-todas"><p class="resultado-conteo">Se muestran 4 facturas ficticias.</p><div class="lista-facturas"><article class="factura" id="factura-demo-101" aria-labelledby="titulo-101"><div class="factura-cabecera"><h3 id="titulo-101">FE-DEMO-101</h3><span class="estado">Recibida</span></div><p class="proveedor">Proveedor Alfa <span class="ayuda">(ficticio)</span></p><dl class="datos-cortos"><div><dt>Consecutivo interno</dt><dd>AF-DEMO-001</dd></div><div><dt>Recibida el</dt><dd>07 de octubre de 2026</dd></div><div><dt>Responsable</dt><dd>Sin asignar</dd></div></dl><div class="factura-pie"><strong>$ 1.190.000 COP</strong><a class="boton secundario" href="detalle.html">Ver FE-DEMO-101</a></div></article><article class="factura" id="factura-demo-102" aria-labelledby="titulo-102"><div class="factura-cabecera"><h3 id="titulo-102">FE-DEMO-102</h3><span class="estado">Asignada</span></div><p class="proveedor">Proveedor Beta <span class="ayuda">(ficticio)</span></p><dl class="datos-cortos"><div><dt>Consecutivo interno</dt><dd>AF-DEMO-002</dd></div><div><dt>Recibida el</dt><dd>05 de octubre de 2026</dd></div><div><dt>Responsable</dt><dd>Lina Demo</dd></div></dl><div class="factura-pie"><strong>$ 595.000 COP</strong><p class="ayuda">Registro de referencia; detalle fuera de esta selección.</p></div></article><article class="factura" id="factura-demo-103" aria-labelledby="titulo-103"><div class="factura-cabecera"><h3 id="titulo-103">FE-DEMO-103</h3><span class="estado">En trámite</span></div><p class="proveedor">Proveedor Gamma <span class="ayuda">(ficticio)</span></p><dl class="datos-cortos"><div><dt>Consecutivo interno</dt><dd>AF-DEMO-003</dd></div><div><dt>Recibida el</dt><dd>03 de octubre de 2026</dd></div><div><dt>Responsable</dt><dd>Pablo Demo</dd></div></dl><div class="factura-pie"><strong>$ 238.000 COP</strong><p class="ayuda">Registro de referencia; detalle fuera de esta selección.</p></div></article><article class="factura" id="factura-demo-104" aria-labelledby="titulo-104"><div class="factura-cabecera"><h3 id="titulo-104">FE-DEMO-104</h3><span class="estado">Pendiente de corrección</span></div><p class="proveedor">Proveedor Delta <span class="ayuda">(ficticio)</span></p><dl class="datos-cortos"><div><dt>Consecutivo interno</dt><dd>AF-DEMO-004</dd></div><div><dt>Recibida el</dt><dd>08 de octubre de 2026</dd></div><div><dt>Responsable</dt><dd>Sin asignar</dd></div></dl><div class="factura-pie"><strong>$ 357.000 COP</strong><a class="boton secundario" href="errores.html">Ver novedad</a></div></article></div></div>
+    <div class="vista-novedades"><p class="resultado-conteo">Se muestra 1 factura con novedad.</p><div class="lista-facturas"><article class="factura" id="factura-novedad-104" aria-labelledby="titulo-novedad-104"><div class="factura-cabecera"><h3 id="titulo-novedad-104">FE-DEMO-104</h3><span class="estado">Pendiente de corrección</span></div><p class="proveedor">Proveedor Delta <span class="ayuda">(ficticio)</span></p><dl class="datos-cortos"><div><dt>Consecutivo interno</dt><dd>AF-DEMO-004</dd></div><div><dt>Recibida el</dt><dd>08 de octubre de 2026</dd></div><div><dt>Responsable</dt><dd>Sin asignar</dd></div></dl><div class="factura-pie"><strong>$ 357.000 COP</strong><a class="boton secundario" href="errores.html">Ver novedad</a></div></article></div></div>
+    <section class="vista-vacia panel" aria-labelledby="vacio-titulo"><h3 id="vacio-titulo">No hay facturas en esta vista.</h3><p>Vuelve a “Todas (4)” para consultar el conjunto de ejemplo. No se eliminaron registros.</p></section>
+  </div>
+</section>
+<p class="nota-corte">Corte fijo del ejemplo: 9 de octubre de 2026, 5:00 p. m., hora de Bogotá.</p>
+  </main>
+  <footer class="pie"><div class="contenedor">AutoFacture · Prototipo académico · Cierre interno significa cierre del trámite, sin contabilización ni pago.</div></footer>
+</body>
+</html>

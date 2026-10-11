@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Maqueta académica de AutoFacture con datos ficticios y navegación local.">
+  <title>Acceso | AutoFacture</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera acceso-cabecera"><div class="contenedor cabecera-fila"><a class="marca" href="index.html"><span class="monograma" aria-hidden="true">AF</span><span><strong>AutoFacture</strong><span class="submarca">Gestión interna de facturas</span></span></a><span class="identidad">Demostración local</span></div></header>
+  <div class="aviso-demo"><div class="contenedor"><strong>Datos ficticios.</strong> Esta demostración no se conecta con FACTURE, DIAN ni SAP.</div></div>
+  <main id="contenido" class="contenedor" tabindex="-1">
+    
+<div class="acceso-rejilla">
+  <section class="presentacion" aria-labelledby="presentacion-titulo">
+    <p class="ceja">Control del trámite interno</p>
+    <h1 id="presentacion-titulo">Cada factura tiene un recorrido.</h1>
+    <p>Consulta su estado, revisa los datos y reconoce quién debe continuar el trámite.</p>
+    <ol class="pasos"><li>Recepción</li><li>Revisión interna</li><li>Asignación</li><li>Seguimiento y reportes</li></ol>
+  </section>
+  <section class="panel acceso-panel" aria-labelledby="acceso-titulo">
+    <p class="ceja">Acceso interno</p>
+    <h2 id="acceso-titulo">Ingresar a la demostración</h2>
+    <p id="acceso-ayuda">Usa solo datos ficticios. El navegador comprueba campos obligatorios; esta maqueta no valida una identidad.</p>
+    <!-- Sin atributos name: el formulario no incorpora credenciales a la dirección de destino. -->
+    <form action="bandeja.html" method="get" aria-describedby="acceso-ayuda">
+      <div class="campo"><label for="usuario">Usuario de ejemplo <span>(obligatorio)</span></label><input id="usuario" type="text" value="auxiliar.demo" required autocomplete="off" autocapitalize="none" spellcheck="false"></div>
+      <div class="campo"><label for="clave">Contraseña ficticia <span>(obligatoria)</span></label><input id="clave" type="password" required minlength="8" autocomplete="off" aria-describedby="clave-ayuda"><p id="clave-ayuda" class="ayuda">Escribe al menos ocho caracteres inventados. No uses tu contraseña real.</p></div>
+      <button class="boton principal ancho" type="submit" id="entrar">Ingresar a la demostración</button>
+    </form>
+    <p><a class="enlace-accion" href="bandeja.html">Recorrer sin completar el formulario</a></p>
+    <details class="ayuda-detalle"><summary>Ayuda con el acceso</summary><p>El producto propuesto es de uso interno. El acceso se habilitaría por personal autorizado. Aquí no se crean cuentas ni se ofrece registro público.</p><a class="enlace-accion" href="errores.html">Ver un informe de error de ejemplo</a></details>
+  </section>
+</div>
+  </main>
+  <footer class="pie"><div class="contenedor">AutoFacture · Prototipo académico · Cierre interno significa cierre del trámite, sin contabilización ni pago.</div></footer>
+</body>
+</html>

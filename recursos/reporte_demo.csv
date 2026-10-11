@@ -1,0 +1,5 @@
+﻿Consecutivo interno;Factura;Proveedor ficticio;Estado;Responsable ficticio;Valor total informado COP
+AF-DEMO-001;FE-DEMO-101;Proveedor Alfa;Recibida;Sin asignar;1190000
+AF-DEMO-002;FE-DEMO-102;Proveedor Beta;Asignada;Lina Demo;595000
+AF-DEMO-003;FE-DEMO-103;Proveedor Gamma;En trámite;Pablo Demo;238000
+AF-DEMO-004;FE-DEMO-104;Proveedor Delta;Pendiente de corrección;Sin asignar;357000
