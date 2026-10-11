@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comprobación de anchos | AutoFacture</title>
+  <link rel="stylesheet" href="../css/estilos.css">
+  <style>
+    /* Este visor es un recurso de comprobación, fuera del recorrido del producto. */
+    .comprobacion { padding:16px 8px; }
+    .comprobacion h1 { font-size:24px; }
+    .comprobacion > p { max-width:80ch; }
+    .selector-ancho input { width:20px; height:20px; min-height:0; margin:0 4px 0 0; accent-color:var(--verde); }
+    .selector-ancho label { display:inline-flex; min-height:48px; align-items:center; margin:0 20px 12px 0; }
+    .rutas-comprobacion { display:flex; flex-direction:row; flex-wrap:wrap; gap:8px; margin-bottom:16px; }
+    .rutas-comprobacion a { color:var(--verde); border:1px solid var(--verde); border-radius:8px; }
+    .visor { width:max-content; }
+    .visor iframe { display:block; border:0; height:3200px; width:360px; background:var(--blanco); }
+    #ancho-768:checked ~ .visor iframe { width:768px; }
+    #ancho-1280:checked ~ .visor iframe { width:1280px; }
+  </style>
+</head>
+<body>
+  <main class="comprobacion">
+    <h1>Comprobación de anchos de AutoFacture</h1>
+    <p>Recurso auxiliar para revisar las seis páginas reales. El ancho se aplica al área de visualización del marco. La altura de 3200 píxeles permite ver la página completa. No representa un dispositivo físico.</p>
+    <div class="selector-ancho" role="group" aria-label="Ancho del área de visualización">
+      <input type="radio" name="ancho" id="ancho-360" value="360" checked><label for="ancho-360">360 píxeles</label>
+      <input type="radio" name="ancho" id="ancho-768" value="768"><label for="ancho-768">768 píxeles</label>
+      <input type="radio" name="ancho" id="ancho-1280" value="1280"><label for="ancho-1280">1280 píxeles</label>
+      <nav class="rutas-comprobacion" aria-label="Pantallas para comprobar">
+        <a href="../index.html" target="pantalla">P01 Acceso</a>
+        <a href="../bandeja.html" target="pantalla">P02 Bandeja</a>
+        <a href="../detalle.html" target="pantalla">P03 Detalle</a>
+        <a href="../asignacion.html" target="pantalla">P04 Asignación</a>
+        <a href="../reportes.html" target="pantalla">P05 Reportes</a>
+        <a href="../errores.html" target="pantalla">P06 Errores</a>
+      </nav>
+      <div class="visor"><iframe name="pantalla" title="Página real de AutoFacture en el ancho seleccionado" src="../index.html"></iframe></div>
+    </div>
+  </main>
+</body>
+</html>
