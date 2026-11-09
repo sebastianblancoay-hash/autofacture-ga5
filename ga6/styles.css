@@ -99,3 +99,10 @@ code { overflow-wrap: anywhere; }
   .acciones > * { width: 100%; }
   th,td { padding: .5rem; }
 }
+
+/* Interfaces finales: textos recibidos y formularios extensos. */
+pre { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; font: .9rem/1.5 var(--fuente); }
+#vista { min-width: 0; }
+#mensaje:focus { outline: 3px solid var(--azul); outline-offset: 3px; }
+.tabla th,.tabla td { overflow-wrap: anywhere; }
+#vista .formulario { margin-bottom: 1rem; }

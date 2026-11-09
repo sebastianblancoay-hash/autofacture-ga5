@@ -1,0 +1,17 @@
+{
+  "facturas": [
+    {
+      "numero": "FE-DEMO-105",
+      "proveedor": "Proveedor Épsilon (ficticio)",
+      "nit": "DEMO-900000005",
+      "total": 420000,
+      "moneda": "COP",
+      "emision": "2026-11-02",
+      "recepcion": "2026-11-03",
+      "vencimiento": "2026-11-20",
+      "oc": "OC-DEMO-7005",
+      "area": "Compras",
+      "servicio": "Suministros"
+    }
+  ]
+}

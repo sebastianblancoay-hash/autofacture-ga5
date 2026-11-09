@@ -1,0 +1,10 @@
+<!doctype html>
+<html lang="es">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Verificación de anchos de AutoFacture</title><link rel="stylesheet" href="../styles.css"><script src="visor.js" defer></script></head>
+<body><main><h1>Verificación de AutoFacture</h1><p>Recurso de comprobación fuera del menú del producto. El marco representa un ancho CSS real del navegador.</p>
+<form id="visor"><label for="tipo">Versión</label><select id="tipo"><option value="final">Interfaz final</option><option value="prototipo">Mockup de baja fidelidad</option></select>
+<label for="pagina">Pantalla</label><select id="pagina"></select>
+<label for="ancho">Ancho CSS</label><select id="ancho"><option value="360">360 píxeles</option><option value="768">768 píxeles</option><option value="1280" selected>1280 píxeles</option></select>
+<button type="submit">Mostrar pantalla</button></form><p id="medida" role="status"></p>
+<iframe id="marco" title="Interfaz de AutoFacture en el ancho elegido" width="1280" height="1000"></iframe>
+</main></body></html>
