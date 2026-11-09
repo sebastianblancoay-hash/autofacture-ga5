@@ -1,0 +1,12 @@
+digraph G { graph [rankdir=TB, bgcolor="white", pad="0.3", nodesep="0.4", ranksep="0.65", label="Ingreso y supervisión", labelloc=t, fontname="Arial", fontsize=20]; node [shape=box, style="rounded,filled", fillcolor="#f2f2f2", color="#555555", fontname="Arial", fontsize=14, margin="0.16,0.12"]; edge [fontname="Arial", fontsize=12, color="#555555"];
+P01 [label="P01\nAcceso", URL="index.html"];
+P02 [label="P02\nBandeja", URL="bandeja.html"];
+P07 [label="P07\nPanel general", URL="panel.html"];
+P05 [label="P05\nReportes", URL="reportes.html"];
+P13 [label="P13\nAlertas", URL="alertas.html"];
+P01 -> P02 [label="AUXR / RESP"];
+P01 -> P07 [label="CODA"];
+P07 -> P05 [label="Reportes"];
+P02 -> P13 [label="Alertas · AUXR"];
+P07 -> P13 [label="Consulta · CODA"];
+}

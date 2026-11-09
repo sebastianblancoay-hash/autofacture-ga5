@@ -1,0 +1,101 @@
+/* AutoFacture: una sola hoja para componentes y bocetos. */
+:root {
+  --azul: #16324F;
+  --verde: #20644F;
+  --blanco: #FFFFFF;
+  --tinta: var(--azul);
+  --papel: var(--blanco);
+  --suave: #F2F6F5;
+  --borde: #617587;
+  --error: #8B2020;
+  --foco: var(--azul);
+  --radio: .5rem;
+  --espacio: 1rem;
+  --ancho: 70rem;
+  --fuente: Arial, Helvetica, sans-serif;
+}
+* { box-sizing: border-box; }
+body { margin: 0; color: var(--tinta); background: var(--papel); font: 1rem/1.5 var(--fuente); }
+h1,h2,h3 { line-height: 1.25; overflow-wrap: anywhere; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.1rem; }
+a { color: var(--verde); text-underline-offset: .2em; }
+a:hover { text-decoration-thickness: .15em; }
+button,input,select,textarea { font: inherit; }
+.contenedor,main { width: 100%; max-width: var(--ancho); margin-inline: auto; padding: var(--espacio); }
+.cabecera { color: var(--blanco); background: var(--azul); }
+.cabecera-fila { display: flex; align-items: center; justify-content: space-between; gap: var(--espacio); flex-wrap: wrap; }
+.marca { color: var(--blanco); text-decoration: none; font-size: 1.35rem; font-weight: bold; padding-block: .5rem; }
+.identidad { margin: 0; font-size: .9rem; }
+.menu { display: flex; flex-wrap: wrap; gap: .5rem; }
+.menu a { color: var(--blanco); display: flex; align-items: center; padding: .65rem .85rem; min-height: 44px; }
+.menu a[aria-current="page"] { font-weight: bold; text-decoration-thickness: .2em; }
+.nav-movil { display: none; }
+.nav-movil summary { color: var(--blanco); border-color: var(--blanco); }
+.pie { border-top: 1px solid var(--borde); padding-block: var(--espacio); background: var(--suave); font-size: .9rem; }
+.ruta,.nota { font-size: .9rem; }
+.titulo-pagina { margin-block: 1rem 1.5rem; }
+.panel,.aviso,.tarjeta { border: 1px solid var(--borde); border-radius: var(--radio); padding: 1.25rem; margin-block: var(--espacio); }
+.aviso { background: var(--suave); border-left: .3rem solid var(--verde); }
+.aviso-error { border-left-color: var(--error); }
+.acciones { display: flex; flex-wrap: wrap; gap: .75rem; margin-block: var(--espacio); }
+.boton,button { display: inline-flex; justify-content: center; align-items: center; gap: .4rem; min-height: 48px; max-width: 100%; border: 2px solid var(--verde); border-radius: var(--radio); padding: .65rem 1rem; color: var(--verde); background: var(--blanco); font-weight: bold; text-decoration: none; cursor: pointer; }
+.boton-principal { color: var(--blanco); background: var(--verde); }
+.boton-secundario { color: var(--verde); background: var(--blanco); }
+.boton:hover,button:hover { text-decoration: underline; }
+button:disabled { opacity: .65; cursor: not-allowed; }
+.formulario { max-width: 42rem; }
+fieldset { padding: 1rem; border: 1px solid var(--borde); border-radius: var(--radio); margin-bottom: 1rem; min-width: 0; }
+legend { font-weight: bold; padding-inline: .4rem; }
+.campo { margin-bottom: 1.25rem; }
+label { display: block; font-weight: bold; margin-block: .6rem .35rem; }
+input,select,textarea { display: block; width: 100%; max-width: 100%; min-height: 48px; padding: .65rem; color: var(--tinta); background: var(--blanco); border: 1px solid var(--borde); border-radius: var(--radio); }
+textarea { resize: vertical; }
+input[type="checkbox"],input[type="radio"] { display: inline; width: 1.2rem; min-height: 1.2rem; accent-color: var(--verde); }
+.casilla { display: flex; align-items: center; gap: .6rem; }
+.ayuda { font-size: .9rem; margin-block: .35rem; }
+.error-campo { color: var(--error); font-weight: bold; margin-block: .35rem; }
+[aria-invalid="true"] { border: 2px solid var(--error); }
+.estado { display: inline-block; border: 1px solid var(--azul); color: var(--azul); padding: .25rem .65rem; border-radius: var(--radio); font-size: .9rem; font-weight: bold; margin: .2rem; }
+.estado-cerrada { border-color: var(--verde); color: var(--verde); }
+.estado-pendiente { border-style: dashed; }
+.estado-rechazada { border-color: var(--error); color: var(--error); }
+.resultado { padding: .75rem; border-left: .3rem solid var(--verde); background: var(--suave); }
+.rejilla { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: var(--espacio); }
+.tarjeta { margin: 0; min-width: 0; }
+.tarjeta strong { display: block; font-size: 1.5rem; overflow-wrap: anywhere; }
+.tabla { overflow-x: auto; border: 1px solid var(--borde); border-radius: var(--radio); margin-block: var(--espacio); }
+table { width: 100%; border-collapse: collapse; }
+caption { text-align: left; font-weight: bold; padding: .75rem; }
+th,td { text-align: left; border-bottom: 1px solid var(--borde); padding: .75rem; }
+thead, tfoot { background: var(--suave); }
+.importe { text-align: right; white-space: nowrap; }
+.historial { list-style: none; padding-left: .8rem; border-left: 3px solid var(--verde); }
+.historial li { padding: .4rem 0 1rem 1rem; }
+.historial time { display: block; font-weight: bold; }
+summary { padding: .75rem; cursor: pointer; border: 1px solid var(--borde); border-radius: var(--radio); min-height: 44px; }
+details p { padding-inline: .5rem; }
+.saltar { position: absolute; top: -10rem; left: 1rem; z-index: 20; padding: 1rem; background: var(--blanco); color: var(--azul); }
+.saltar:focus { top: .5rem; }
+:focus-visible { outline: 3px solid var(--foco); outline-offset: 4px; }
+.cabecera :focus-visible { outline-color: var(--blanco); }
+[hidden] { display: none !important; }
+code { overflow-wrap: anywhere; }
+.mapa { display: block; width: 100%; height: auto; min-width: 40rem; }
+.mapa-marco { overflow-x: auto; }
+/* Conservación de la baja fidelidad, sin otra hoja ni estilos incrustados. */
+.boceto { --tinta: #222222; --verde: #333333; --papel: #FFFFFF; --suave: #F2F2F2; --borde: #666666; --foco: #111111; }
+.boceto header,.boceto footer { padding: 1rem max(1rem,calc((100% - 1120px)/2)); background: var(--suave); border-bottom: 2px solid var(--borde); }
+.boceto section { border: 1px dashed var(--borde); padding: 1rem; margin: 1rem 0; }
+.boceto nav { display: flex; gap: .7rem; flex-wrap: wrap; margin: 1rem 0; }
+.boceto th,.boceto td { border: 1px solid var(--borde); }
+@media (max-width: 48rem) {
+  .nav-escritorio { display: none; }
+  .nav-movil { display: block; width: 100%; }
+  .nav-movil .menu { flex-direction: column; padding-top: .5rem; }
+  .rejilla { grid-template-columns: 1fr; }
+  h1 { font-size: 1.6rem; }
+  .acciones > * { width: 100%; }
+  th,td { padding: .5rem; }
+}

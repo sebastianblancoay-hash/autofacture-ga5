@@ -1,0 +1,13 @@
+digraph G { graph [rankdir=TB, bgcolor="white", pad="0.3", nodesep="0.4", ranksep="0.65", label="Trámite y reglas por actor", labelloc=t, fontname="Arial", fontsize=20]; node [shape=box, style="rounded,filled", fillcolor="#f2f2f2", color="#555555", fontname="Arial", fontsize=14, margin="0.16,0.12"]; edge [fontname="Arial", fontsize=12, color="#555555"];
+P02 [label="P02\nBandeja", URL="bandeja.html"];
+P11 [label="P11\nGestionar trámite", URL="tramite.html"];
+P12 [label="P12\nHistorial", URL="historial.html"];
+P14 [label="P14\nReglas", URL="reglas.html"];
+P15 [label="P15\nCrear/editar regla", URL="regla.html"];
+P02 -> P11 [label="RESP · propia"];
+P11 -> P12 [label="Historial"];
+P12 -> P02 [label="Volver"];
+P14 -> P15 [label="AUXR autorizado"];
+P15 -> P14 [label="Cancelar / volver"];
+P14 -> P12 [label="Consultar eventos"];
+}

@@ -1,0 +1,18 @@
+digraph G { graph [rankdir=TB, bgcolor="white", pad="0.3", nodesep="0.4", ranksep="0.65", label="Recepción y revisión · AUXR", labelloc=t, fontname="Arial", fontsize=20]; node [shape=box, style="rounded,filled", fillcolor="#f2f2f2", color="#555555", fontname="Arial", fontsize=14, margin="0.16,0.12"]; edge [fontname="Arial", fontsize=12, color="#555555"];
+P08 [label="P08\nImportar archivo", URL="importar.html"];
+P09 [label="P09\nRecepciones e incidencias", URL="recepciones.html"];
+P06 [label="P06\nInforme de novedad", URL="errores.html"];
+P02 [label="P02\nBandeja", URL="bandeja.html"];
+P03 [label="P03\nDetalle y revisión", URL="detalle.html"];
+P10 [label="P10\nCorregir datos y conservar versión", URL="corregir.html"];
+P04 [label="P04\nAsignación/reasignación", URL="asignacion.html"];
+P08 -> P09 [label="Resultado de ejemplo"];
+P09 -> P06 [label="Incidencia 104"];
+P06 -> P09 [label="Regresar"];
+P09 -> P02 [label="3 identificables"];
+P02 -> P03 [label="Abrir factura"];
+P03 -> P10 [label="Corregir"];
+P10 -> P03 [label="Revisar versión"];
+P03 -> P04 [label="Revisión vigente"];
+P04 -> P03 [label="Cancelar"];
+}

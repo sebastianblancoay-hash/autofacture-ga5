@@ -1,0 +1,36 @@
+flowchart TD
+  P01["P01 · Acceso"]
+  P02["P02 · Bandeja"]
+  P03["P03 · Detalle y revisión"]
+  P04["P04 · Asignación/reasignación"]
+  P05["P05 · Reportes"]
+  P06["P06 · Informe de novedad"]
+  P07["P07 · Panel general"]
+  P08["P08 · Importar archivo"]
+  P09["P09 · Recepciones e incidencias"]
+  P10["P10 · Corregir datos y conservar versión"]
+  P11["P11 · Gestionar trámite"]
+  P12["P12 · Historial"]
+  P13["P13 · Alertas"]
+  P14["P14 · Reglas"]
+  P15["P15 · Crear/editar regla"]
+  P01 -->|"AUXR / RESP"| P02
+  P01 -->|"CODA"| P07
+  P07 -->|"Reportes"| P05
+  P02 -->|"Alertas · AUXR"| P13
+  P07 -->|"Consulta · CODA"| P13
+  P08 -->|"Resultado de ejemplo"| P09
+  P09 -->|"Incidencia 104"| P06
+  P06 -->|"Regresar"| P09
+  P09 -->|"3 identificables"| P02
+  P02 -->|"Abrir factura"| P03
+  P03 -->|"Corregir"| P10
+  P10 -->|"Revisar versión"| P03
+  P03 -->|"Revisión vigente"| P04
+  P04 -->|"Cancelar"| P03
+  P02 -->|"RESP · propia"| P11
+  P11 -->|"Historial"| P12
+  P12 -->|"Volver"| P02
+  P14 -->|"AUXR autorizado"| P15
+  P15 -->|"Cancelar / volver"| P14
+  P14 -->|"Consultar eventos"| P12

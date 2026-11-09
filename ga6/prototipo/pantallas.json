@@ -1,0 +1,107 @@
+[
+  [
+    "P01",
+    "Acceso",
+    "index.html",
+    "RF-UI01",
+    "HU-008"
+  ],
+  [
+    "P02",
+    "Bandeja",
+    "bandeja.html",
+    "RF07, RF08, RF09, RF10, RF15, RF21",
+    "HU-001, HU-004, HU-006"
+  ],
+  [
+    "P03",
+    "Detalle y revisión",
+    "detalle.html",
+    "RF02, RF03, RF04, RF05, RF08, RF09, RF19",
+    "HU-001, HU-002"
+  ],
+  [
+    "P04",
+    "Asignación/reasignación",
+    "asignacion.html",
+    "RF11, RF12, RF14, RF19, RF20",
+    "HU-003"
+  ],
+  [
+    "P05",
+    "Reportes",
+    "reportes.html",
+    "RF21, RF22",
+    "HU-006"
+  ],
+  [
+    "P06",
+    "Informe de novedad",
+    "errores.html",
+    "RF04, RF05, RF19",
+    "HU-002"
+  ],
+  [
+    "P07",
+    "Panel general",
+    "panel.html",
+    "RF16, RF17, RF18, RF23",
+    "HU-005, HU-006"
+  ],
+  [
+    "P08",
+    "Importar archivo",
+    "importar.html",
+    "RF06, RF07, RF08, RF09, RF10",
+    "HU-001"
+  ],
+  [
+    "P09",
+    "Recepciones e incidencias",
+    "recepciones.html",
+    "RF06, RF04, RF19",
+    "HU-001, HU-002"
+  ],
+  [
+    "P10",
+    "Corregir datos y conservar versión",
+    "corregir.html",
+    "RF02, RF04, RF08, RF09, RF19, RF20",
+    "HU-002"
+  ],
+  [
+    "P11",
+    "Gestionar trámite",
+    "tramite.html",
+    "RF15, RF19, RF20",
+    "HU-004"
+  ],
+  [
+    "P12",
+    "Historial",
+    "historial.html",
+    "RF14, RF19, RF20",
+    "HU-002, HU-003, HU-004, HU-005, HU-007"
+  ],
+  [
+    "P13",
+    "Alertas",
+    "alertas.html",
+    "RF04, RF16, RF17, RF18",
+    "HU-002, HU-005"
+  ],
+  [
+    "P14",
+    "Reglas",
+    "reglas.html",
+    "RF13, RF11, RF12, RF19, RF20",
+    "HU-007"
+  ],
+  [
+    "P15",
+    "Crear/editar regla",
+    "regla.html",
+    "RF13, RF11, RF12, RF19, RF20",
+    "HU-007"
+  ]
+]
