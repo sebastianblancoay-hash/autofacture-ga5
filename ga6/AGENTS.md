@@ -1,6 +1,6 @@
 # AutoFacture · Preparación GA6 AA3 y AA4
 
-Aplicación web interna propuesta para recibir, revisar, asignar y seguir facturas. Etapa autorizada: quince interfaces finales de demostración, almacenamiento compartido, importación JSON, versiones, reglas y CSV. Conservar los mockups y no publicar ni controlar otros chats.
+Aplicación web interna propuesta para recibir, revisar, asignar y seguir facturas. Etapa autorizada: quince interfaces finales de demostración, almacenamiento compartido, importación JSON, versiones, reglas y CSV. Conservar los mockups. La demostración está publicada en la carpeta ga6 del repositorio autorizado; no publicar cambios adicionales ni controlar otros chats sin instrucción del usuario.
 
 ## Fuentes y orden de trabajo
 Leer docs/historias.md, docs/requisitos.md y docs/pantallas.md, docs/herramientas.md y docs/navegacion.md y docs/componentes.md. El contexto adjunto define el alcance de AutoFacture y la guía define la evidencia académica. referencia/maqueta_GA5 conserva la maqueta anterior sin cambios; no es una implementación GA6 terminada. Las instrucciones actuales del usuario prevalecen sobre ejemplos de la guía.
@@ -25,7 +25,7 @@ Leer docs/historias.md, docs/requisitos.md y docs/pantallas.md, docs/herramienta
 - Conservar versiones y eventos. No sumar monedas distintas ni inventar tasas tributarias o fechas. Las cifras tributarias de la maqueta son datos informados, no reglas aprobadas.
 
 ## Evidencia honesta
-No afirmar pruebas, revisiones o correcciones hechas por Sebastián o Valentina sin evidencia. Identificar las propuestas y correcciones del asistente como revisión asistida de los antecedentes. No atribuirlas a una intervención personal de Sebastián. No declarar cumplimiento integral de la guía con estos documentos. La comparación de herramientas y los mockups pertenecen a esta etapa; la base de componentes también está autorizada; esta etapa incluye comprobaciones estáticas y de lógica; la revisión real en navegador la realiza otro asistente por separado; no atribuirla a Sebastián ni al asistente que prepara este ZIP; capturas y PDF integrador siguen pendientes. Registrar únicamente acciones realmente ejecutadas.
+No afirmar pruebas, revisiones o correcciones hechas por Sebastián o Valentina sin evidencia. Identificar las propuestas y correcciones del asistente como revisión asistida de los antecedentes. No atribuirlas a una intervención personal de Sebastián. No declarar cumplimiento integral de la guía con estos documentos. La comparación de herramientas y los mockups pertenecen a esta etapa; la base de componentes también está autorizada; esta etapa incluye comprobaciones estáticas y de lógica. El asistente director completó la revisión en navegador y las capturas. El informe integrador y la bitácora acompañan el código. La revisión personal del aprendiz sigue siendo su responsabilidad. Registrar únicamente acciones realmente ejecutadas.
 
 ## Correcciones y límites del prototipo
 FE-DEMO-104 se conserva como incidencia sin identidad suficiente: no asignar consecutivo de factura ni responsable. Tres facturas por COP 2.023.000 y una incidencia aparte por COP 357.000. La maqueta GA5 original permanece sin cambios y no define el conteo actual.

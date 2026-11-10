@@ -49,7 +49,7 @@ El bloque real de styles.css incluye:
   .rejilla { grid-template-columns: 1fr; }
 ```
 
-Es el inicio de la regla para anchos pequeños. El menú pasa a details/summary y las tarjetas quedan en una columna. Las tablas tienen su propia región desplazable. Esto prepara la distribución para celular; La revisión real en navegador la está realizando otro asistente, por separado. No se atribuye a Sebastián ni al asistente que prepara este ZIP, ni se declara completada aquí.
+Es el inicio de la regla para anchos pequeños. El menú pasa a details/summary y las tarjetas quedan en una columna. Las tablas tienen su propia región desplazable. Esto prepara la distribución para celular; La revisión final en navegador fue realizada por el asistente director del trabajo y está registrada en verificacion-navegador.md y en las capturas. No se atribuye a Sebastián ni Valentina.
 
 ## JavaScript: conservar versiones
 Fragmento de corregir en js/modelo.js:
@@ -116,7 +116,7 @@ El styles.css compartido contiene:
 }
 ```
 
-La base de formulario-filtros es una columna y no tiene el límite de 42rem de los formularios de edición. minmax(0, 1fr) permite que una columna se reduzca sin imponer el ancho de un texto largo. Los errores siguen junto al campo y el orden del HTML no se cambia. Los bloques pre conservan pre-wrap, overflow-wrap y desplazamiento interno: un JSON extenso no necesita ampliar toda la página. Son reglas implementadas y comprobadas estáticamente; su aspecto en navegador corresponde a la revisión del otro asistente.
+La base de formulario-filtros es una columna y no tiene el límite de 42rem de los formularios de edición. minmax(0, 1fr) permite que una columna se reduzca sin imponer el ancho de un texto largo. Los errores siguen junto al campo y el orden del HTML no se cambia. Los bloques pre conservan pre-wrap, overflow-wrap y desplazamiento interno: un JSON extenso no necesita ampliar toda la página. Son reglas implementadas y comprobadas estáticamente; su distribución en P02 y P10 se comprobó en un marco de 356 píxeles CSS.
 
 ## Ajuste: formato visible sin cambiar los datos
 La función datosTabla usa un mapa de nombres claros y el formateador dinero(v, d.moneda) para Total informado. Esto también se aplica a las versiones anteriores al consultarlas. La función solo construye una tabla para mostrarla: no modifica los importes, identidades ni versiones almacenados, ni calcula impuestos.

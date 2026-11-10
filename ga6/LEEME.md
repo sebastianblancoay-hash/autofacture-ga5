@@ -3,7 +3,7 @@
 Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 ## Cómo abrir el recorrido completo
-Descomprimir todo el ZIP. Servir la carpeta AutoFacture_GA6 desde una publicación web o un servidor estático local, siempre con el mismo origen HTTP/HTTPS. No se publicó nada como parte de esta entrega.
+Descomprimir todo el ZIP. Servir la carpeta AutoFacture_GA6 desde una publicación web o un servidor estático local, siempre con el mismo origen HTTP/HTTPS. La demostración está disponible en https://sebastianblancoay-hash.github.io/autofacture-ga5/ga6/ . Se conservó la versión GA5 anterior en la raíz del repositorio.
 
 Si tienes Python instalado, abrir una terminal dentro de AutoFacture_GA6 y ejecutar:
 
@@ -55,7 +55,7 @@ node pruebas/modelo.test.cjs
 node pruebas/interfaz-simulada.test.cjs
 ```
 
-Son pruebas de lógica y DOM simulado, no pruebas visuales de navegador. La revisión real en navegador la está realizando otro asistente, por separado. No se atribuye a Sebastián ni al asistente que prepara este ZIP, ni se declara completada aquí. En esta actualización pasaron 105 comprobaciones de lógica y las 31 combinaciones de pantalla/identidad del DOM simulado, con casos adicionales para la regresión, los errores y el texto largo. No se conectó DIAN, FACTURE, SAP o Supabase; no se publicó ni se controlaron otros chats.
+Son pruebas de lógica y DOM simulado, no pruebas visuales de navegador. La revisión final en navegador fue realizada por el asistente director del trabajo y está registrada en verificacion-navegador.md y en las capturas. No se atribuye a Sebastián ni Valentina. En esta actualización pasaron 105 comprobaciones de lógica y las 31 combinaciones de pantalla/identidad del DOM simulado, con casos adicionales para la regresión, los errores y el texto largo. No se conectó DIAN, FACTURE, SAP o Supabase; el asistente director publicó únicamente el código y la documentación de esta demostración en el repositorio autorizado.
 
 ## Ajustes de esta versión
 Repetir una revisión válida de la misma versión no devuelve una factura En trámite a Asignada. Una corrección que crea versión, una revisión pendiente o una rechazada conservan sus bloqueos. Los filtros de bandeja y reportes usan dos o tres columnas cuando hay espacio y una en celular. El detalle y las versiones muestran nombres claros e importes con moneda, sin calcular impuestos. El JSON largo conserva su texto dentro de una región ajustable/desplazable. Los datos iniciales, las versiones conservadas y las muestras no se cambian.
