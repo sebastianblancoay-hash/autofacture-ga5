@@ -106,3 +106,25 @@ pre { white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; font: .9r
 #mensaje:focus { outline: 3px solid var(--azul); outline-offset: 3px; }
 .tabla th,.tabla td { overflow-wrap: anywhere; }
 #vista .formulario { margin-bottom: 1rem; }
+
+/* Filtros compartidos de bandeja y reportes: sin limitarse a 42rem. */
+.formulario-filtros {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  max-width: none;
+  width: 100%;
+  align-items: start;
+}
+.formulario-filtros .campo { margin-bottom: 0; min-width: 0; }
+.formulario-filtros > button { grid-column: 1 / -1; justify-self: start; }
+@media (min-width: 48.01rem) {
+  .formulario-filtros { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (min-width: 64rem) {
+  .formulario-filtros { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+/* Los datos largos se ajustan o desplazan dentro de su propia región. */
+.panel,.campo,.formulario,.tabla { min-width: 0; max-width: 100%; }
+pre { min-width: 0; overflow-x: auto; word-break: break-word; }
+.aviso,.error-campo,.ayuda,.historial li { overflow-wrap: anywhere; }

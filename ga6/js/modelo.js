@@ -62,8 +62,10 @@
     exigir(texto(motivo), 'Explica el resultado de revisión.', 'motivo');
     if (resultado === 'Validada ficticia' && !s.reglaRevision.disponible) { resultado = 'Pendiente'; motivo = 'Falta REV-DEMO-01; no puede avanzar. ' + motivo; }
     validarDatos(actual(f));
+    // Solo una revisión válida de la versión ya vigente conserva el avance.
+    const conservarTramite = f.estado === 'En trámite' && vigente(f);
     f.revisiones.push({ version: f.version, resultado, motivo: texto(motivo), actor: identidad(actor).nombre, fecha: CORTE, regla: s.reglaRevision.disponible ? s.reglaRevision.id : 'Falta regla' });
-    f.estado = resultado === 'Rechazada preliminarmente' ? resultado : resultado === 'Pendiente' ? 'Pendiente de corrección' : f.responsable ? 'Asignada' : 'Recibida';
+    f.estado = resultado === 'Rechazada preliminarmente' ? resultado : resultado === 'Pendiente' ? 'Pendiente de corrección' : conservarTramite ? 'En trámite' : f.responsable ? 'Asignada' : 'Recibida';
     evento(s,actor,'Revisión',id,`Versión ${f.version}: ${resultado}. ${motivo}`); return resultado;
   }
   function propuesta(s, f) {
