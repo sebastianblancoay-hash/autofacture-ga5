@@ -13,7 +13,8 @@ if(['360','768','1280'].includes(q.get('ancho')))ancho.value=q.get('ancho');
 if(q.get('tipo')==='prototipo')tipo.value='prototipo';
 function mostrar(){
   marco.width=Number(ancho.value);marco.height=1000;
-  marco.src='../'+(tipo.value==='prototipo'?'prototipo/':'')+pagina.value;
+  const contexto=tipo.value==='final'&&['detalle.html','asignacion.html','corregir.html','historial.html'].includes(pagina.value)?'?id=F-101':'';
+  marco.src='../'+(tipo.value==='prototipo'?'prototipo/':'')+pagina.value+contexto;
   medida.textContent='Ancho solicitado '+ancho.value+' píxeles CSS.';
 }
 marco.addEventListener('load',()=>{
