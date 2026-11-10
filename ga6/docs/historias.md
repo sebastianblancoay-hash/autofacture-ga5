@@ -1,6 +1,6 @@
 # Historias de usuario · AutoFacture
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 Historias desarrolladas mediante revisión asistida de los antecedentes y utilizadas en las quince interfaces construidas. No se atribuye su redacción ni sus correcciones a una intervención personal de Sebastián.
 

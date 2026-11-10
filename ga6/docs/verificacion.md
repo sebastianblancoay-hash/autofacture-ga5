@@ -1,6 +1,6 @@
 # Comprobaciones de la etapa funcional
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 Las comprobaciones estáticas y de lógica de este documento las ejecutó el asistente que prepara el ZIP. Las propuestas y correcciones se identifican como revisión asistida. La revisión real en navegador la está realizando otro asistente, por separado. No se atribuye a Sebastián ni al asistente que prepara este ZIP, ni se declara completada aquí.
 

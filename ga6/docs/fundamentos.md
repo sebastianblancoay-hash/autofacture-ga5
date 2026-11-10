@@ -1,6 +1,6 @@
 # Fundamentos aplicados en AutoFacture
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 Estos fragmentos corresponden a los archivos construidos. Las explicaciones describen decisiones del proyecto y quedan para revisión del aprendiz; no se presentan como palabras ni pruebas realizadas por él.
 

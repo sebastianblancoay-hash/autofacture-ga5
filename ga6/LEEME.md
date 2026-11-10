@@ -1,6 +1,6 @@
 # AutoFacture · Quince interfaces finales de demostración
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 ## Cómo abrir el recorrido completo
 Descomprimir todo el ZIP. Servir la carpeta AutoFacture_GA6 desde una publicación web o un servidor estático local, siempre con el mismo origen HTTP/HTTPS. No se publicó nada como parte de esta entrega.
@@ -62,3 +62,8 @@ Repetir una revisión válida de la misma versión no devuelve una factura En tr
 
 ## Actualización de recursos
 Los enlaces a CSS y JavaScript incluyen una identificación de versión. Esto ayuda a cargar juntos los archivos actualizados después de una publicación, conservando una sola hoja styles.css y los mismos scripts. Si ya tenías la página abierta durante una actualización, vuelve a abrirla antes de continuar.
+
+## Informe y revisión personal
+El PDF integrador reúne las seis evidencias GA6-220501096 de AA3 y AA4. El código, los mockups y las pruebas permiten repetir el recorrido. Revisa las historias, las correcciones y los fragmentos para poder explicarlos con tus palabras. Las capturas y decisiones registradas son de una ejecución asistida. La guía presenta OpenCode; este trabajo utilizó ChatGPT Work en el navegador.
+
+La fecha 9 de noviembre de 2026 identifica la elaboración y el corte ficticio. No es una fecha límite confirmada: el material consultado no fija el cierre de los espacios de Zajuna. El mismo PDF se carga en los seis espacios cuando se haya realizado la revisión personal.

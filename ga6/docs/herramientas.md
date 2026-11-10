@@ -1,6 +1,6 @@
 # Comparación de herramientas de prototipado
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 ## Opciones consideradas
 

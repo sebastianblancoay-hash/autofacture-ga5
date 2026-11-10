@@ -1,6 +1,6 @@
 # Mapa y recorridos
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 Abrir ../prototipo/mapa.html para ver el mapa sin instalar herramientas. Está dividido en ingreso/supervisión, recepción/revisión y trámite/reglas para que las flechas se lean con claridad.
 

@@ -1,6 +1,6 @@
 # Componentes reutilizables de AutoFacture
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 ## Base de esta etapa
 styles.css contiene las variables y todas las clases. plantilla.html reúne la estructura común. componentes.html conserva ejemplos aislados; las quince interfaces finales de demostración ya están en la raíz. js/componentes.js solo demuestra mensajes de validación en un formulario ficticio: no guarda ni aplica reglas.
