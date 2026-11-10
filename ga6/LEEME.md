@@ -59,3 +59,6 @@ Son pruebas de lógica y DOM simulado, no pruebas visuales de navegador. La revi
 
 ## Ajustes de esta versión
 Repetir una revisión válida de la misma versión no devuelve una factura En trámite a Asignada. Una corrección que crea versión, una revisión pendiente o una rechazada conservan sus bloqueos. Los filtros de bandeja y reportes usan dos o tres columnas cuando hay espacio y una en celular. El detalle y las versiones muestran nombres claros e importes con moneda, sin calcular impuestos. El JSON largo conserva su texto dentro de una región ajustable/desplazable. Los datos iniciales, las versiones conservadas y las muestras no se cambian.
+
+## Actualización de recursos
+Los enlaces a CSS y JavaScript incluyen una identificación de versión. Esto ayuda a cargar juntos los archivos actualizados después de una publicación, conservando una sola hoja styles.css y los mismos scripts. Si ya tenías la página abierta durante una actualización, vuelve a abrirla antes de continuar.
