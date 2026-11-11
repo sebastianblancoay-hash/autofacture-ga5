@@ -3,7 +3,7 @@
 Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Elaboración inicial: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 ## Fuente y alcance
 RF01 a RF25 conservan los códigos y temas del contexto adjunto. La descripción «El sistema debe…» desarrolla esos temas, porque el adjunto no aporta el documento histórico completo. Las prioridades históricas y las relaciones RF24/RF25 se conservan como decisiones del proyecto aprobadas por el aprendiz. Los códigos no se reemplazan ni se renumeran. La guía, sección 4, exige código, descripción, HU y prioridad.

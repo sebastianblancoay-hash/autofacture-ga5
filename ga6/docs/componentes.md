@@ -3,7 +3,7 @@
 Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Elaboración inicial: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 ## Base de esta etapa
 styles.css contiene las variables y todas las clases. plantilla.html reúne la estructura común. componentes.html conserva ejemplos aislados; las quince interfaces finales de demostración ya están en la raíz. js/componentes.js solo demuestra mensajes de validación en un formulario ficticio: no guarda ni aplica reglas.
@@ -63,7 +63,7 @@ Los errores aparecen junto al campo, están asociados por aria-describedby y el 
 - MDN Web Docs. «details». https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/details
 - MDN Web Docs. «Crear enlaces». https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/Creating_links
 
-Son fuentes técnicas verificadas en español para el informe. La fecha académica de la entrega no se presenta como una fecha inventada de pruebas o de consulta.
+Son fuentes técnicas verificadas en español para el informe. Las fechas distinguen elaboración inicial, revisión documental y escenario de los datos.
 
 ## Uso funcional construido
 P01 usa selección y formulario; P02/P05 comparten filtros, tabla y tarjetas calculadas. P03 muestra datos y formulario de revisión; P04 usa responsable/motivo. P08 usa archivo y mensajes junto al campo. P10 usa formulario de datos y motivo. P11 presenta formularios de transición por factura propia. P12 usa historial y details para versiones; P13/P14 usan tablas; P15 usa formulario de regla. P06 presenta textos de incidencia mediante textContent y P07 tarjetas/conteos.
@@ -76,4 +76,4 @@ La clase formulario-filtros se usa en P02 y P05, sobre formulario. En celular di
 La tabla de datos de P03/P12 presenta «Número de factura», «NIT informado» y «Total informado», además de las fechas y demás campos. El total usa su moneda original mediante Intl.NumberFormat, sin calcular impuestos ni transformar lo almacenado. Los bloques pre ajustan líneas y permiten desplazamiento interno si hace falta; paneles, campos y tablas tienen un ancho limitado al contenedor. El contenido del JSON sigue insertándose como texto.
 
 ## Configuración final
-Se mantiene una sola hoja activa styles.css con variables, la plantilla y el catálogo componentes.html. Se conservan azul, verde y blanco y la distribución actual de filtros. El catálogo describe los usos reales de cada componente en las quince interfaces. La verificación documentada corresponde a análisis estático, lógica y DOM simulado; no acredita inspección visual manual.
+Se mantiene una sola hoja activa styles.css con variables, la plantilla y el catálogo componentes.html. Se conservan azul, verde y blanco y la distribución actual de filtros. El catálogo describe los usos reales de cada componente en las quince interfaces. Las comprobaciones automáticas corresponden a análisis estático, lógica y DOM simulado. Los recorridos del navegador se registran por separado en verificacion-navegador.md y en las capturas del informe.

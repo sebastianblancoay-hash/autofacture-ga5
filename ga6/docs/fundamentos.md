@@ -3,7 +3,7 @@
 Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Elaboración inicial: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 Se conservan las decisiones aprobadas para la entrega: HTML, CSS y JavaScript puro, una sola hoja styles.css, plantilla y componentes reutilizables. Las quince interfaces están construidas. Este documento explica fragmentos exactos de sus archivos actuales; cuando se muestra solo el inicio de un bloque se indica expresamente. No se cambia el código ni los datos.
 

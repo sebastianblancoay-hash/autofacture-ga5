@@ -3,7 +3,7 @@
 Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Elaboración inicial: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 El aprendiz aprueba conservar las seis historias anteriores y completar ocho en total. El codificador desarrolla los criterios y los aplica a las quince interfaces siguiendo esas decisiones.
 

@@ -3,7 +3,7 @@
 Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Elaboración inicial: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 Las páginas están en la raíz. Comparten plantilla, styles.css, js/modelo.js y js/aplicacion.js. prototipo/ conserva los mockups de la etapa anterior, sin convertirlos en las páginas funcionales. La fecha de corte de las interfaces finales es 9 de noviembre de 2026 a las 5:00 p. m., Colombia.
 

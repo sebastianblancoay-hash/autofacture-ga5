@@ -3,7 +3,7 @@
 Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Elaboración inicial: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 ## Cómo abrir el recorrido completo
 Descomprimir todo el ZIP. Servir la carpeta AutoFacture_GA6 desde una publicación web o un servidor estático local, siempre con el mismo origen HTTP/HTTPS. El ZIP se entrega sin publicación web.

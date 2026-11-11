@@ -3,7 +3,7 @@
 Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 
-Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Elaboración inicial: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 El prototipo HTML es la opción elegida por el aprendiz para recorrer AutoFacture y continuar la maqueta anterior. Se conservan los quince bocetos enlazados y el mapa editable. Abrir ../prototipo/mapa.html para ver el mapa sin instalar herramientas. Está dividido en ingreso/supervisión, recepción/revisión y trámite/reglas para que las flechas se lean con claridad.
 

@@ -7,7 +7,7 @@ async function mostrar(){
   const ruta=selector.value;
   document.getElementById('titulo').textContent=ruta;
   try{
-    const respuesta=await fetch('../'+ruta);
+    const respuesta=await fetch('../'+ruta+'?revision=20261110-2', {cache:'no-store'});
     if(!respuesta.ok)throw new Error('Archivo no disponible');
     document.getElementById('contenido').textContent=await respuesta.text();
   }catch(error){document.getElementById('contenido').textContent='No se pudo leer el archivo desde esta publicación.';}
