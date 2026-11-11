@@ -1,111 +1,84 @@
 # Fundamentos aplicados en AutoFacture
 
-Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
 
-Estos fragmentos corresponden a los archivos construidos. Las explicaciones describen decisiones del proyecto y quedan para revisión del aprendiz; no se presentan como palabras ni pruebas realizadas por él.
 
-## HTML: estructura común y carga ordenada
-En index.html y las demás páginas se enlaza una sola hoja y dos scripts clásicos:
+Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+
+Se conservan las decisiones aprobadas para la entrega: HTML, CSS y JavaScript puro, una sola hoja styles.css, plantilla y componentes reutilizables. Las quince interfaces están construidas. Este documento explica fragmentos exactos de sus archivos actuales; cuando se muestra solo el inicio de un bloque se indica expresamente. No se cambia el código ni los datos.
+
+## HTML: organizar la pantalla
+HTML da estructura y significado al contenido. En index.html aparece esta apertura de cabecera:
 
 ```html
-<link rel="stylesheet" href="styles.css">
-<script src="js/modelo.js" defer></script><script src="js/aplicacion.js" defer></script>
+<header class="cabecera">
 ```
 
-La hoja da la misma apariencia a todas las pantallas. defer permite esperar a que el HTML esté disponible y mantiene el modelo antes de la aplicación. No se cargan frameworks ni recursos de CDN.
+header agrupa la presentación de AutoFacture: marca, identidad ficticia y menú. No es el título del documento; ese título se define con title. La cabecera ayuda a reconocer el sistema en todas las pantallas.
 
-Cada página tiene header, nav, main y footer. El enlace «Saltar al contenido» apunta a main con id contenido. El título y los códigos P/RF/HU están en el HTML; el contenido que cambia se agrega dentro de vista.
+El menú principal comienza con esta etiqueta real del mismo archivo:
 
-## HTML: etiquetas y mensajes asociados
-En componentes.html está este ejemplo real:
+```html
+<nav class="menu" aria-label="Navegación principal">
+```
+
+nav identifica un grupo de enlaces de navegación, por ejemplo Bandeja, Reportes e Historial. aria-label le da un nombre al grupo para tecnologías de asistencia. El menú móvil usa otro grupo llamado «Navegación móvil».
+
+El contenido principal comienza así en index.html:
+
+```html
+<main id="contenido" tabindex="-1">
+```
+
+main contiene la tarea de la pantalla, no el menú ni el pie. Su id permite llegar con el enlace «Saltar al contenido». tabindex="-1" permite enfocar esa región sin añadirla como una parada normal más al recorrer con Tab. Dentro de main, la aplicación agrega los formularios y tablas en el contenedor vista.
+
+## HTML: label y aria-describedby
+En componentes.html se encuentra esta etiqueta:
 
 ```html
 <label for="condicion">Condición (obligatoria)</label>
+```
+
+label es el nombre visible del campo. Su for coincide con el id del control: al activar la etiqueta se dirige la interacción a ese campo. No conviene usar solo un texto de ejemplo dentro de la caja como nombre.
+
+El control asociado aparece exactamente así:
+
+```html
 <input id="condicion" type="text" required maxlength="80" aria-describedby="ayuda-condicion error-condicion">
 ```
 
-El for coincide con el id del campo. aria-describedby relaciona la ayuda y el mensaje de error. En las interfaces funcionales, la función campo de aplicacion.js crea la misma relación con identificadores propios; formulario muestra el error junto al campo y solicita el foco allí. No se depende de una alerta que desaparece sin indicar el campo.
+aria-describedby relaciona el campo con los textos que explican cómo llenarlo y qué error tiene. No reemplaza a label: agrega información. En AutoFacture, una condición puede ser «Proveedor Alfa»; si falta, el mensaje explica qué corregir junto al campo. La aplicación funcional crea estas asociaciones con sus propias funciones campo y formulario.
 
-## CSS: variables y estilos compartidos
-En styles.css:
+## CSS: variables de color
+Este es el inicio exacto del bloque :root de styles.css, no el bloque completo:
 
 ```css
 :root {
   --azul: #16324F;
   --verde: #20644F;
   --blanco: #FFFFFF;
+
 ```
 
-Este fragmento es el inicio del bloque :root. Sus colores se usan con var(). Si se cambia la paleta, no hay que buscar el mismo valor en quince archivos. La clase boceto redefine unas variables dentro de la misma hoja para conservar grises solo en prototipo/.
-
-## CSS: distribución adaptable
-El bloque real de styles.css incluye:
+Las variables guardan los colores comunes: azul para la identidad visual, verde para acciones y blanco para fondos o texto sobre colores oscuros. :root permite compartirlas en la hoja. Esta regla real las utiliza:
 
 ```css
-@media (max-width: 48rem) {
-  .nav-escritorio { display: none; }
-  .nav-movil { display: block; width: 100%; }
-  .nav-movil .menu { flex-direction: column; padding-top: .5rem; }
-  .rejilla { grid-template-columns: 1fr; }
+.cabecera { color: var(--blanco); background: var(--azul); }
 ```
 
-Es el inicio de la regla para anchos pequeños. El menú pasa a details/summary y las tarjetas quedan en una columna. Las tablas tienen su propia región desplazable. Esto prepara la distribución para celular; La revisión final en navegador fue realizada por el asistente director del trabajo y está registrada en verificacion-navegador.md y en las capturas. No se atribuye a Sebastián ni Valentina.
+var() toma el valor de una variable. Así todas las cabeceras usan los mismos colores sin repetirlos en quince archivos. Los bocetos conservan sus grises mediante la clase boceto dentro del mismo styles.css; no tienen otra hoja activa.
 
-## JavaScript: conservar versiones
-Fragmento de corregir en js/modelo.js:
+## CSS: Grid y media queries
+Grid organiza el contenido en filas y columnas. Este es el inicio exacto de la regla de filtros en styles.css:
 
-```js
-f.version += 1;
-f.versiones.push({ version: f.version, datos: d });
-f.estado = 'Pendiente de corrección';
+```css
+.formulario-filtros {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+
 ```
 
-Después de validar los nuevos datos y descartar duplicados, se agrega otra versión en lugar de sobrescribir la anterior. Las revisiones conservan el número de versión al que pertenecen. Por eso una revisión de la versión 1 no permite avanzar con la versión 2. El historial puede mostrar ambas.
-
-## JavaScript: modelo separado de la pantalla
-El modelo ofrece funciones como revisar, asignar, corregir, transicion e importar. También comprueba roles y condiciones. No basta con esconder un botón: una operación no autorizada se rechaza en el modelo de demostración.
-
-La aplicación crea elementos con document.createElement y asigna el contenido a textContent. Los nombres de proveedor y textos de un JSON no se insertan con innerHTML. Un texto que parezca una etiqueta se muestra como texto y no se ejecuta.
-
-Cada cambio se aplica sobre una copia del estado. Al guardar se comprueba que la revisión del almacenamiento no cambió, se escribe un único JSON en localStorage y se actualiza la vista. Las demás páginas del mismo origen leen ese conjunto. No se promete una base de datos ni concurrencia segura de servidor: otra pestaña obliga a recargar si tiene datos anteriores.
-
-## JavaScript: CSV de las filas filtradas y protección
-En js/modelo.js:
-
-```js
-function celdaCSV(v) {
-    let x = String(v ?? '');
-    if (/^[\s\u0000-\u0020\uFEFF]*[=+@-]/.test(x) || /^[\t\r\n]/.test(x)) x = "'" + x;
-    return '"' + x.replace(/"/g, '""') + '"';
-  }
-```
-
-La función convierte cada dato en una celda entre comillas y duplica las comillas que ya traía el texto. Si la celda comienza con un signo que podría interpretarse como fórmula, incluso después de espacios o caracteres de control, agrega un apóstrofo. El CSV se genera con las mismas filas calculadas por los filtros aplicados, no con el archivo fijo de GA5. El importe exportado usa dos decimales sin separadores de miles; representa el mismo valor mostrado.
-
-## Datos y límites
-Los totales se acumulan por moneda usando centavos enteros. No se suman COP, USD y EUR como si fueran lo mismo. No hay conversión ni tasas tributarias. REV-DEMO-01 solo produce resultados ficticios claramente rotulados. El corte y la hora de eventos son simulados y visibles.
-
-Las pruebas de Node y DOM simulado descritas en verificacion.md comprueban lógica y conexión entre componentes. No demuestran apariencia, teclado real, lector de pantalla ni experiencia en celular.
-
-## Referencias técnicas reales en español
-- MDN Web Docs. «label». https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/label
-- MDN Web Docs. «Uso de propiedades personalizadas (variables) en CSS». https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties
-- MDN Web Docs. «Crear enlaces». https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/Creating_links
-- MDN Web Docs. «details». https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/details
-
-Las fuentes se usan como apoyo técnico. Los ejemplos y fragmentos de este documento son del proyecto entregado.
-
-## Ajuste: revisión repetida sin retroceder el trámite
-En revisar, de js/modelo.js, se conserva esta condición antes de guardar la revisión:
-
-```js
-const conservarTramite = f.estado === 'En trámite' && vigente(f);
-```
-
-Solo una revisión válida mantiene ese avance. La decisión de estado sigue dando prioridad a Pendiente y Rechazada preliminarmente. Una corrección crea otra versión, queda pendiente y no cumple esa condición: necesita nueva revisión. La nueva revisión y su evento se conservan aunque el estado continúe En trámite.
-
-## Ajuste: filtros en columnas y textos largos
-El styles.css compartido contiene:
+display: grid activa esa distribución. Una columna minmax(0, 1fr) ocupa el espacio disponible y puede reducirse cuando el ancho es pequeño. Es la disposición base para los cinco filtros de Bandeja y Reportes en celular. Las siguientes reglas completas cambian la distribución cuando hay espacio:
 
 ```css
 @media (min-width: 48.01rem) {
@@ -114,9 +87,82 @@ El styles.css compartido contiene:
 @media (min-width: 64rem) {
   .formulario-filtros { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
+
 ```
 
-La base de formulario-filtros es una columna y no tiene el límite de 42rem de los formularios de edición. minmax(0, 1fr) permite que una columna se reduzca sin imponer el ancho de un texto largo. Los errores siguen junto al campo y el orden del HTML no se cambia. Los bloques pre conservan pre-wrap, overflow-wrap y desplazamiento interno: un JSON extenso no necesita ampliar toda la página. Son reglas implementadas y comprobadas estáticamente; su distribución en P02 y P10 se comprobó en un marco de 356 píxeles CSS.
+Una media query aplica estilos si se cumple una condición de ancho. Desde 48.01rem se muestran dos columnas y desde 64rem tres. repeat() repite las columnas del mismo tamaño. Los campos conservan su orden, sus etiquetas y sus mensajes; solo cambia cómo se distribuyen. No se modifican los filtros ni sus resultados.
 
-## Ajuste: formato visible sin cambiar los datos
-La función datosTabla usa un mapa de nombres claros y el formateador dinero(v, d.moneda) para Total informado. Esto también se aplica a las versiones anteriores al consultarlas. La función solo construye una tabla para mostrarla: no modifica los importes, identidades ni versiones almacenados, ni calcula impuestos.
+## JavaScript: eventos y DOM
+Un evento es algo que sucede en la página, como enviar un formulario o activar un botón. La aplicación escucha esos eventos para responder. Esta instrucción exacta de js/aplicacion.js está dentro del manejador de envío:
+
+```js
+ev.preventDefault();
+```
+
+Evita el envío normal del formulario y permite comprobar los datos antes de ejecutar la operación de demostración. No guarda nada por sí misma.
+
+El DOM es la representación de la página que JavaScript puede consultar y modificar. La función nodo de js/aplicacion.js contiene esta instrucción:
+
+```js
+const n=document.createElement(tag);
+```
+
+Crea un elemento, por ejemplo un párrafo, una celda o un campo. La misma función asigna contenido textual con esta instrucción real:
+
+```js
+n.textContent=v;
+```
+
+En una recepción, el nombre del proveedor o un fragmento de JSON se muestran como texto. Aunque el archivo contenga algo parecido a una etiqueta HTML, no se inserta como código ejecutable. Las tablas, tarjetas y mensajes se actualizan con esos elementos del DOM.
+
+## JavaScript: validar y llevar el foco al error
+Validar significa comprobar que los datos permiten realizar la operación. Esta instrucción pertenece a corregir en js/modelo.js:
+
+```js
+exigir(texto(motivo),'Escribe el motivo de corrección.','motivo');
+```
+
+La corrección necesita un motivo. Si está vacío, exigir detiene la operación y señala el campo motivo. También se validan identificación, número, importes, fechas y duplicados antes de guardar una versión. La validación del modelo no se limita a ocultar un botón.
+
+Este fragmento exacto de formulario, en js/aplicacion.js, muestra el mensaje y solicita el foco:
+
+```js
+p.textContent=e.message;p.hidden=false;x.input.setAttribute('aria-invalid','true');x.input.focus();
+```
+
+El mensaje queda junto al campo, aria-invalid señala el problema y focus() dirige allí la interacción. El foco es el punto que recibe el teclado; no es solo un color. styles.css le da un contorno visible con :focus-visible, y en la cabecera usa blanco para distinguirlo del fondo azul. En el catálogo componentes.html hay un ejemplo aislado de validación; las operaciones que guardan cambios pertenecen al modelo y a la aplicación funcional.
+
+## JavaScript: conservar versiones y exigir otra revisión
+Después de validar una corrección, js/modelo.js ejecuta este fragmento exacto:
+
+```js
+    f.version += 1;
+    f.versiones.push({ version: f.version, datos: d });
+    f.estado = 'Pendiente de corrección';
+
+```
+
+Primero aumenta el número de versión; después agrega los datos nuevos al arreglo versiones, sin borrar el registro anterior. Por último deja la factura en Pendiente de corrección.
+
+Por ejemplo, si AUXR cambia una OC de FE-DEMO-101, la versión 1 permanece consultable en Historial y se agrega la versión 2. Las revisiones tienen asociado su número de versión: la revisión de la versión 1 no autoriza avanzar con la 2. AUXR debe revisar los datos actuales y registrar otro resultado válido antes de asignar o continuar el trámite. No se calcula un impuesto por hacer esta corrección.
+
+Repetir una revisión válida sin cambiar la versión es otro caso. Antes de guardar esa revisión, el modelo conserva esta condición:
+
+```js
+const conservarTramite = f.estado === 'En trámite' && vigente(f);
+```
+
+Si la factura ya estaba En trámite con revisión vigente, una nueva revisión válida de esa misma versión no la devuelve a Asignada. Sí se guardan la revisión y su evento. Si el resultado es Pendiente o Rechazada preliminarmente, el bloqueo tiene prioridad; una versión nueva también exige nueva revisión. Si falta la regla ficticia necesaria, no se anuncia una validación que no se pudo hacer.
+
+## Datos, decisiones y límites de la entrega
+La documentación mantiene las decisiones aprobadas para AutoFacture. El ejemplo inicial tiene tres facturas por COP 2.023.000 y la incidencia FE-DEMO-104 aparte por COP 357.000, sin NIT inventado. Los cambios funcionales se comparten entre páginas del mismo origen HTTP/HTTPS. El acceso por identidad es de demostración, no autenticación real. No hay conexión con DIAN, FACTURE o SAP ni aprobación tributaria.
+
+Los fragmentos se contrastaron con los archivos del proyecto. El aprendiz conserva estas decisiones para la entrega; el codificador las implementa con HTML, CSS y JavaScript puro. Las comprobaciones descritas no equivalen a una inspección visual manual.
+
+## Referencias técnicas reales en español
+- MDN Web Docs. «label». https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/label
+- MDN Web Docs. «Uso de propiedades personalizadas (variables) en CSS». https://developer.mozilla.org/es/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties
+- MDN Web Docs. «Crear enlaces». https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/Creating_links
+- MDN Web Docs. «details». https://developer.mozilla.org/es/docs/Web/HTML/Reference/Elements/details
+
+Los fragmentos anteriores proceden del proyecto. Estas fuentes sirven como apoyo técnico y no sustituyen la evidencia de los archivos construidos.

@@ -1,6 +1,9 @@
 # Comparación de herramientas de prototipado
 
-Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
+
+
+Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 ## Opciones consideradas
 
@@ -15,9 +18,9 @@ Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 | Límite | Un flujo navegable no acredita funcionamiento del sistema. | Estos enlaces tampoco ejecutan registro, revisión, reglas, exportación ni autenticación. |
 
 ## Decisión para AutoFacture
-Se elige HTML para esta entrega porque ya existe una maqueta GA5 en HTML/CSS y el trabajo final debe usar HTML, CSS y JavaScript puro. Así se puede revisar el recorrido en el navegador y entregar todos los archivos juntos. En los mockups de prototipo/ se usan grises, bordes sencillos y controles nativos para concentrarse en qué hace cada pantalla y cómo se regresa, sin adelantar el diseño final.
+El aprendiz elige el prototipo HTML porque permite recorrer AutoFacture y continuar la maqueta anterior de GA5. Se conserva la comparación con Figma y los quince bocetos enlazados de prototipo/, junto con su mapa editable. Los bocetos mantienen grises, controles sencillos y datos ficticios para revisar qué hace cada pantalla y cómo se regresa.
 
-Figma se conserva como antecedente de prototipado conservado en la revisión asistida y como herramienta comparada. Los tres adjuntos no contienen un archivo ni enlace Figma verificable: no se inventan pantallas anteriores, capturas o pruebas en esa herramienta. La comparación describe sus funciones documentadas, no una sesión realizada por el aprendiz.
+Figma se conserva como antecedente y herramienta comparada. El prototipo elegido para esta entrega es HTML, con quince bocetos enlazados y mapa editable. Las funciones de Figma se describen a partir de su documentación en español; el paquete no incluye un archivo Figma.
 
 ## Antecedente: recorrido de los mockups
 Abrir prototipo/index.html, elegir el recorrido AUXR y entrar a la bandeja. Abrir FE-DEMO-101, revisar el escenario y visitar asignación; cancelar regresa al detalle. Desde recepciones se abre la novedad de FE-DEMO-104 y se regresa a la incidencia, que sigue separada de las tres facturas. El menú Mapa permite ubicar las quince pantallas. Los formularios muestran datos ficticios y resultados de escenario: no guardan cambios.
@@ -32,3 +35,6 @@ Fecha de esta entrega: 9 de noviembre de 2026, hora de Colombia. La elección de
 
 ## Etapa construida
 Las quince interfaces funcionales están en la raíz y usan azul, verde y blanco. Comparten datos, versiones, reglas y reportes de demostración mediante almacenamiento del mismo origen. El recorrido estático descrito arriba corresponde únicamente a los mockups conservados en prototipo/. Ver LEEME.md para abrir el recorrido funcional por HTTP/HTTPS.
+
+## Escenarios separados
+Los quince bocetos conservan el escenario de octubre de 2026. Todos usan el pie «AutoFacture · Boceto de navegación · Datos ficticios». Las interfaces funcionales de la raíz tienen corte del 9 de noviembre de 2026 a las 5:00 p. m., Colombia. Esta diferencia es intencional: el boceto es un antecedente de navegación, no una copia actualizada de los datos funcionales. No se cambian fechas, importes ni resultados de los ejemplos.

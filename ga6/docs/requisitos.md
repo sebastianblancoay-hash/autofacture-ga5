@@ -1,11 +1,23 @@
 # Requisitos · AutoFacture
 
-Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
+
+
+Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 ## Fuente y alcance
-RF01 a RF25 conservan los códigos y temas del contexto adjunto. La descripción «El sistema debe…» desarrolla esos temas, porque el adjunto no aporta el documento histórico completo. Las prioridades históricas y las relaciones RF24/RF25 se conservan según la revisión asistida de los antecedentes. Los códigos no se reemplazan ni se renumeran. La guía, sección 4, exige código, descripción, HU y prioridad.
+RF01 a RF25 conservan los códigos y temas del contexto adjunto. La descripción «El sistema debe…» desarrolla esos temas, porque el adjunto no aporta el documento histórico completo. Las prioridades históricas y las relaciones RF24/RF25 se conservan como decisiones del proyecto aprobadas por el aprendiz. Los códigos no se reemplazan ni se renumeran. La guía, sección 4, exige código, descripción, HU y prioridad.
 
 La columna de alcance distingue lo que se representa localmente y lo que seguirá fuera de implementación. Conservar un RF no significa haberlo programado, probado o cumplido. RF01 y RF24 se relacionan con HU-001, sin implementar integraciones. RF25 es preparación futura de arquitectura, sin HU de origen atribuida. Una integración pendiente conserva su prioridad histórica; su condición se registra en alcance.
+
+## Decisiones del proyecto aprobadas
+El aprendiz aprueba conservar RF01 a RF25 y las seis historias anteriores, HU-001 a HU-006. El conjunto se completa hasta ocho historias en total con HU-007 (configurar reglas) y HU-008 (acceso interno de demostración).
+
+AUXR recibe, revisa, asigna y consulta alertas. Solo AUXR autorizado configura RF13. RESP gestiona sus propias facturas y CODA consulta, sin administrar reglas ni modificar trámites.
+
+Se conservan las prioridades originales: RF07, RF09, RF16, RF21, RF22 y RF25 son Media; los demás RF históricos son Alta. RF24 se relaciona con HU-001. RF25 se mantiene como preparación futura de arquitectura, sin atribuirlo a HU-006.
+
+El aprendiz define y dirige estas decisiones; el codificador implementa las instrucciones en la demostración. La aprobación del alcance no sustituye las comprobaciones técnicas ni implementa integraciones.
 
 ## Tabla de requisitos funcionales
 
@@ -56,7 +68,7 @@ No se reconstruyen RNF no incluidos en la fuente.
 ## Reglas y decisiones de la implementación
 El contexto indica conservar intentos sin identidad, revisar después de registrar, exigir revisión vigente para avanzar, guardar versiones y eventos, usar motivo y responsable en asignación manual y resolver empates manualmente. Son reglas tomadas de la fuente.
 
-La revisión asistida de los antecedentes concretó la identidad mínima y el control local de duplicados mediante identificación del emisor y número de factura. También definió AUXR autorizado para configurar reglas y CODA para supervisar y consultar. La demostración implementa el paso de Asignada a En trámite y luego a Cerrada para RESP. Las demoras quedan sin evaluar porque no hay un umbral definido. Estas precisiones se documentan como trabajo del asistente sobre los antecedentes, sin atribuirlas a una intervención personal de Sebastián ni a un requisito histórico más detallado que no fue adjuntado.
+El proyecto usa identificación del emisor y número de factura como identidad mínima y clave local de duplicado. Los roles vigentes están aprobados: solo AUXR autorizado configura reglas y CODA consulta. La demostración implementa el paso de Asignada a En trámite y luego a Cerrada para RESP. Las demoras quedan sin evaluar porque no hay un umbral definido. El aprendiz aprueba estas decisiones y el codificador las implementa. Los temas históricos se conservan sin atribuirles detalles no incluidos en la fuente.
 
 AUXR recibe, revisa, asigna y consulta alertas (HU-005); AUXR autorizado configura reglas (RF13/HU-007). RESP gestiona sus facturas; CODA supervisa y consulta, sin administrar reglas. DEV es técnico y no hereda permisos. No sumar monedas diferentes ni inferir fechas o tasas. Los nombres de campos futuros deben contrastarse con el modelo de datos cuando esté disponible: el contexto solo menciona su existencia, no incluye su esquema completo. No modificar ni conectar Supabase.
 

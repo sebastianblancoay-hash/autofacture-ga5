@@ -1,9 +1,12 @@
 # AutoFacture · Quince interfaces finales de demostración
 
-Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
+
+
+Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 ## Cómo abrir el recorrido completo
-Descomprimir todo el ZIP. Servir la carpeta AutoFacture_GA6 desde una publicación web o un servidor estático local, siempre con el mismo origen HTTP/HTTPS. La demostración está disponible en https://sebastianblancoay-hash.github.io/autofacture-ga5/ga6/ . Se conservó la versión GA5 anterior en la raíz del repositorio.
+Descomprimir todo el ZIP. Servir la carpeta AutoFacture_GA6 desde una publicación web o un servidor estático local, siempre con el mismo origen HTTP/HTTPS. El ZIP se entrega sin publicación web.
 
 Si tienes Python instalado, abrir una terminal dentro de AutoFacture_GA6 y ejecutar:
 
@@ -55,15 +58,15 @@ node pruebas/modelo.test.cjs
 node pruebas/interfaz-simulada.test.cjs
 ```
 
-Son pruebas de lógica y DOM simulado, no pruebas visuales de navegador. La revisión final en navegador fue realizada por el asistente director del trabajo y está registrada en verificacion-navegador.md y en las capturas. No se atribuye a Sebastián ni Valentina. En esta actualización pasaron 105 comprobaciones de lógica y las 31 combinaciones de pantalla/identidad del DOM simulado, con casos adicionales para la regresión, los errores y el texto largo. No se conectó DIAN, FACTURE, SAP o Supabase; el asistente director publicó únicamente el código y la documentación de esta demostración en el repositorio autorizado.
+Son pruebas de lógica y DOM simulado, no pruebas visuales de navegador. Las comprobaciones de este paquete se describen por su método y resultado. No acreditan una inspección visual manual en navegador. En esta actualización pasaron 105 comprobaciones de lógica y las 31 combinaciones de pantalla/identidad del DOM simulado, con casos adicionales para la regresión, los errores y el texto largo. No hay conexiones con DIAN, FACTURE, SAP o Supabase.
 
 ## Ajustes de esta versión
 Repetir una revisión válida de la misma versión no devuelve una factura En trámite a Asignada. Una corrección que crea versión, una revisión pendiente o una rechazada conservan sus bloqueos. Los filtros de bandeja y reportes usan dos o tres columnas cuando hay espacio y una en celular. El detalle y las versiones muestran nombres claros e importes con moneda, sin calcular impuestos. El JSON largo conserva su texto dentro de una región ajustable/desplazable. Los datos iniciales, las versiones conservadas y las muestras no se cambian.
 
-## Actualización de recursos
-Los enlaces a CSS y JavaScript incluyen una identificación de versión. Esto ayuda a cargar juntos los archivos actualizados después de una publicación, conservando una sola hoja styles.css y los mismos scripts. Si ya tenías la página abierta durante una actualización, vuelve a abrirla antes de continuar.
+## Demostración y código
 
-## Informe y revisión personal
-El PDF integrador reúne las seis evidencias GA6-220501096 de AA3 y AA4. El código, los mockups y las pruebas permiten repetir el recorrido. Revisa las historias, las correcciones y los fragmentos para poder explicarlos con tus palabras. Las capturas y decisiones registradas son de una ejecución asistida. La guía presenta OpenCode; este trabajo utilizó ChatGPT Work en el navegador.
+Demostración: https://sebastianblancoay-hash.github.io/autofacture-ga5/ga6/
 
-La fecha 9 de noviembre de 2026 identifica la elaboración y el corte ficticio. No es una fecha límite confirmada: el material consultado no fija el cierre de los espacios de Zajuna. El mismo PDF se carga en los seis espacios cuando se haya realizado la revisión personal.
+Repositorio: https://github.com/sebastianblancoay-hash/autofacture-ga5/tree/main/ga6
+
+Los enlaces de recursos conservan su identificación de versión para cargar juntos los CSS y JavaScript publicados. La fecha de elaboración de la interfaz y el corte ficticio siguen en el 9 de noviembre; la revisión documental de esta entrega corresponde al 10 de noviembre de 2026, Colombia.

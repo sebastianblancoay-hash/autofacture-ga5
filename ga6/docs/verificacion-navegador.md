@@ -1,8 +1,8 @@
 # Verificación del navegador de AutoFacture
 
-Fecha de elaboración: 9 de noviembre de 2026, Colombia.
+Versión documental: 10 de noviembre de 2026, Colombia. Escenario ficticio de la aplicación: corte del 9 de noviembre de 2026.
 
-Registro de comprobaciones asistidas. Las capturas muestran distintos pasos del recorrido y perfiles. Los restablecimientos recuperan los tres registros iniciales; las vistas de RESP muestran solo sus facturas. No se atribuyen estas acciones al aprendiz.
+Registro de comprobaciones del navegador. Las capturas muestran distintos pasos del recorrido y perfiles. Los restablecimientos recuperan los tres registros iniciales; las vistas de RESP muestran solo sus facturas.
 
 | Caso | Comprobación | Resultado |
 |---|---|---|
@@ -30,4 +30,3 @@ Registro de comprobaciones asistidas. Las capturas muestran distintos pasos del 
 
 El registro incluye pruebas de navegador y el resumen de pruebas automáticas en C15. Las restricciones de identidad son de demostración. La revisión móvil usó un marco con 356 píxeles CSS observados, no un teléfono físico. El menú móvil se abrió y cerró mediante su control accesible. No se certifica accesibilidad integral ni uso con lector de pantalla.
 
-Durante la continuidad del trabajo, el mantenimiento del entorno eliminó copias temporales. Se recuperaron 25 imágenes del borrador de Word y los prompts del chat. La versión documental se recuperó de su ZIP guardado. El código publicado se comparó mediante su hash de Git; solo difería el LEEME actualizado. Las capturas nuevas se conservaron junto con las anteriores.

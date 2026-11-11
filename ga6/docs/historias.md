@@ -1,13 +1,16 @@
 # Historias de usuario · AutoFacture
 
-Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
 
-Historias desarrolladas mediante revisión asistida de los antecedentes y utilizadas en las quince interfaces construidas. No se atribuye su redacción ni sus correcciones a una intervención personal de Sebastián.
+
+Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+
+El aprendiz aprueba conservar las seis historias anteriores y completar ocho en total. El codificador desarrolla los criterios y los aplica a las quince interfaces siguiendo esas decisiones.
 
 ## Fuentes y conservación
 El contexto adjunto enumera HU-001 a HU-006 por código y tema, sin una redacción completa ni criterios anteriores. Se conservan esos códigos y temas; las frases y criterios siguientes son su desarrollo documental, no una transcripción histórica. HU-007 y HU-008 se añaden por indicación expresa del contexto y del usuario. La guía, sección 4, pide al menos ocho historias, criterios comprobables y prioridad.
 
-Prioridad propuesta: Alta = necesaria para el recorrido principal; Media = apoyo al seguimiento. Las prioridades de los RF se conservan aparte en requisitos.md; pendiente no es un nivel de prioridad. Los criterios describen el comportamiento esperado. Las comprobaciones efectivamente realizadas en esta etapa constan en verificacion.md; no se atribuyen al aprendiz. Los detalles no definidos por la fuente se marcan como propuesta.
+Prioridad de las historias: Alta = necesaria para el recorrido principal; Media = apoyo al seguimiento. Las prioridades de los RF se conservan aparte en requisitos.md; pendiente no es un nivel de prioridad. Los criterios describen el comportamiento esperado. Las comprobaciones efectivamente realizadas en esta etapa constan en verificacion.md; se describen por su método y resultado. Las decisiones aprobadas se resumen al final; los límites técnicos se conservan.
 
 ## HU-001 · Recibir facturas
 
@@ -15,7 +18,7 @@ Como AUXR quiero recibir facturas identificables desde un archivo autorizado par
 
 **Prioridad:** Alta.
 
-**Origen:** Original: tema y código del contexto; redacción y criterios desarrollados en esta preparación.
+**Origen:** Original: tema y código del contexto; criterios documentados por el codificador según las decisiones aprobadas.
 
 **Relación:** RF06, RF07, RF08, RF09, RF10; RF01 y RF24 condicionados, fuera de implementación.
 
@@ -119,7 +122,7 @@ Como AUXR autorizado quiero crear, editar y activar reglas de asignación para o
 
 **Prioridad:** Alta.
 
-**Origen:** Nueva: desarrollo explícito de RF13, indicado en el contexto. Actor definido durante la revisión asistida de los antecedentes: AUXR autorizado configura; CODA supervisa y consulta.
+**Origen:** Nueva: desarrollo explícito de RF13, indicado en el contexto. Rol aprobado por el aprendiz: AUXR autorizado configura; CODA supervisa y consulta.
 
 **Relación:** RF13, RF11, RF12, RF19, RF20.
 
@@ -150,5 +153,11 @@ Como usuario interno quiero seleccionar mi identidad y perfil ficticios e ingres
 5. No ofrecer registro público ni solicitar contraseñas reales.
 
 
-## Corrección mediante revisión asistida
-Durante la revisión asistida de los antecedentes, el asistente propuso conservar AUXR en HU-005 y AUXR autorizado en RF13. Esas correcciones se incorporaron sin cambiar códigos ni temas. La incidencia FE-DEMO-104 queda fuera de la bandeja mientras no tenga identificación suficiente. La propuesta y su redacción corresponden al trabajo del asistente; no se presentan como una intervención personal de Sebastián.
+## Decisiones del proyecto aprobadas
+El aprendiz aprueba conservar RF01 a RF25 y las seis historias anteriores, HU-001 a HU-006. El conjunto se completa hasta ocho historias en total con HU-007 (configurar reglas) y HU-008 (acceso interno de demostración).
+
+AUXR recibe, revisa, asigna y consulta alertas. Solo AUXR autorizado configura RF13. RESP gestiona sus propias facturas y CODA consulta, sin administrar reglas ni modificar trámites.
+
+Se conservan las prioridades originales: RF07, RF09, RF16, RF21, RF22 y RF25 son Media; los demás RF históricos son Alta. RF24 se relaciona con HU-001. RF25 se mantiene como preparación futura de arquitectura, sin atribuirlo a HU-006.
+
+El aprendiz define y dirige estas decisiones; el codificador implementa las instrucciones en la demostración. La aprobación del alcance no sustituye las comprobaciones técnicas ni implementa integraciones.

@@ -1,6 +1,18 @@
-# AutoFacture · Preparación GA6 AA3 y AA4
+# AutoFacture · Reglas del proyecto GA6 AA3 y AA4
 
-Aplicación web interna propuesta para recibir, revisar, asignar y seguir facturas. Etapa autorizada: quince interfaces finales de demostración, almacenamiento compartido, importación JSON, versiones, reglas y CSV. Conservar los mockups. La demostración está publicada en la carpeta ga6 del repositorio autorizado; no publicar cambios adicionales ni controlar otros chats sin instrucción del usuario.
+Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
+
+
+Aplicación web interna propuesta para recibir, revisar, asignar y seguir facturas. Etapa autorizada: quince interfaces finales de demostración, almacenamiento compartido, importación JSON, versiones, reglas y CSV. Conservar los mockups como referencia de diseño.
+
+## Decisiones del proyecto aprobadas
+El aprendiz aprueba conservar RF01 a RF25 y las seis historias anteriores, HU-001 a HU-006. El conjunto se completa hasta ocho historias en total con HU-007 (configurar reglas) y HU-008 (acceso interno de demostración).
+
+AUXR recibe, revisa, asigna y consulta alertas. Solo AUXR autorizado configura RF13. RESP gestiona sus propias facturas y CODA consulta, sin administrar reglas ni modificar trámites.
+
+Se conservan las prioridades originales: RF07, RF09, RF16, RF21, RF22 y RF25 son Media; los demás RF históricos son Alta. RF24 se relaciona con HU-001. RF25 se mantiene como preparación futura de arquitectura, sin atribuirlo a HU-006.
+
+El aprendiz define y dirige estas decisiones; el codificador implementa las instrucciones en la demostración. La aprobación del alcance no sustituye las comprobaciones técnicas ni implementa integraciones.
 
 ## Fuentes y orden de trabajo
 Leer docs/historias.md, docs/requisitos.md y docs/pantallas.md, docs/herramientas.md y docs/navegacion.md y docs/componentes.md. El contexto adjunto define el alcance de AutoFacture y la guía define la evidencia académica. referencia/maqueta_GA5 conserva la maqueta anterior sin cambios; no es una implementación GA6 terminada. Las instrucciones actuales del usuario prevalecen sobre ejemplos de la guía.
@@ -24,8 +36,8 @@ Leer docs/historias.md, docs/requisitos.md y docs/pantallas.md, docs/herramienta
 - Estados: Recibida, Pendiente de corrección, Rechazada preliminarmente, Asignada, En trámite y Cerrada. Validada es resultado de revisión, no estado. Cerrada significa cierre interno, sin pago ni contabilización.
 - Conservar versiones y eventos. No sumar monedas distintas ni inventar tasas tributarias o fechas. Las cifras tributarias de la maqueta son datos informados, no reglas aprobadas.
 
-## Evidencia honesta
-No afirmar pruebas, revisiones o correcciones hechas por Sebastián o Valentina sin evidencia. Identificar las propuestas y correcciones del asistente como revisión asistida de los antecedentes. No atribuirlas a una intervención personal de Sebastián. No declarar cumplimiento integral de la guía con estos documentos. La comparación de herramientas y los mockups pertenecen a esta etapa; la base de componentes también está autorizada; esta etapa incluye comprobaciones estáticas y de lógica. El asistente director completó la revisión en navegador y las capturas. El informe integrador y la bitácora acompañan el código. La revisión personal del aprendiz sigue siendo su responsabilidad. Registrar únicamente acciones realmente ejecutadas.
+## Dirección e implementación
+El aprendiz decide el alcance, aprueba los roles y dirige las instrucciones del proyecto. El codificador implementa esas instrucciones y documenta las comprobaciones técnicas. Describir las pruebas por método y resultado: no inventar actuaciones manuales, capturas ni validaciones personales. El paquete incluye quince interfaces, componentes, mockups y documentación; el PDF integrador y sus evidencias visuales no forman parte de este ZIP.
 
 ## Correcciones y límites del prototipo
 FE-DEMO-104 se conserva como incidencia sin identidad suficiente: no asignar consecutivo de factura ni responsable. Tres facturas por COP 2.023.000 y una incidencia aparte por COP 357.000. La maqueta GA5 original permanece sin cambios y no define el conteo actual.

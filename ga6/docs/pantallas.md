@@ -1,8 +1,16 @@
 # Fichas de las quince interfaces finales de demostración
 
-Fecha de elaboración: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
+Revisión final: **10 de noviembre de 2026 · Colombia (America/Bogota)**.
+
+
+Fecha de entrega: **9 de noviembre de 2026 · Colombia (America/Bogota)**.
 
 Las páginas están en la raíz. Comparten plantilla, styles.css, js/modelo.js y js/aplicacion.js. prototipo/ conserva los mockups de la etapa anterior, sin convertirlos en las páginas funcionales. La fecha de corte de las interfaces finales es 9 de noviembre de 2026 a las 5:00 p. m., Colombia.
+
+## Bocetos de navegación conservados
+El aprendiz elige el prototipo HTML para recorrer AutoFacture y continuar la maqueta anterior. P01 a P15 tienen su boceto enlazado en prototipo/, con los mismos nombres de archivo de la tabla. Se conserva la comparación con Figma y el mapa editable. Los quince bocetos mantienen el escenario de octubre de 2026 y el pie «AutoFacture · Boceto de navegación · Datos ficticios». Una nota en cada uno aclara que la versión funcional tiene corte del 9 de noviembre de 2026 a las 5:00 p. m., Colombia. No se modifican sus datos ni se añaden funciones.
+
+## Interfaces funcionales de la raíz
 
 | Código | Pantalla / archivo | RF | HU | Implementación | Accesibilidad y regreso |
 |---|---|---|---|---|---|
@@ -27,4 +35,4 @@ Tres facturas por COP 2.023.000 y FE-DEMO-104 como incidencia por COP 357.000 ap
 
 Los códigos RF se mantienen para trazabilidad; no todos se cumplen por completo. RF01 y RF24 pertenecen a HU-001 y sus integraciones siguen fuera de alcance. RF25 es preparación futura de arquitectura sin HU atribuida. RF03 no aplica tasas reales. RF18 no inventa umbral de demoras. RF22 implementa CSV; no Excel/PDF. RF20 ofrece eventos de demostración, sin auditoría segura de servidor.
 
-Las restricciones se revisan al abrir páginas directamente y en las operaciones del modelo. Son controles de demostración que pueden alterarse desde el navegador; no son autenticación ni autorización de servidor. La revisión final en navegador fue realizada por el asistente director del trabajo y está registrada en verificacion-navegador.md y en las capturas. No se atribuye a Sebastián ni Valentina.
+Las restricciones se revisan al abrir páginas directamente y en las operaciones del modelo. Son controles de demostración que pueden alterarse desde el navegador; no son autenticación ni autorización de servidor. Las comprobaciones de este paquete se describen por su método y resultado. No acreditan una inspección visual manual en navegador.
